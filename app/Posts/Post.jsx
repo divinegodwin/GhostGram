@@ -1,6 +1,14 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 
 const Post = () => {
+
+
+  const [posts, setPosts] = useState([])
+  
+  
+  
   return (
     <div>
 
@@ -19,7 +27,7 @@ const Post = () => {
 
                 <div className='w-[28px] h-[28px] ml-[20rem] mt-[-1rem]'>
                 <svg data-slot="icon" 
-                fill="red" 
+                fill="none" 
                 stroke-width="1.5" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24" 
