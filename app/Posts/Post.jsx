@@ -6,11 +6,48 @@ const Post = () => {
 
 
   const [posts, setPosts] = useState([])
+  const [userInput, setUserInput] = useState("")
   
+  const handleChange =(event)=>{
+setUserInput(event.target.value);
+  }
+
+  //when the button is clicked if stores the user input imto an array of post
   
-  
+  const postButton =()=>{
+setPosts((prevPost)=> [prevPost, userInput])
+console.log(posts)
+  }
+
   return (
     <div>
+
+{/*Form section */}
+      <div>
+        <div className="mt-[2rem] ml-16">
+          <textarea
+          value={userInput}
+          onChange={handleChange}
+          className='border-2 w-[250px] h-[80px]'
+          >
+
+          </textarea>
+
+          <div>
+<button 
+onClick={postButton}
+className="w-[90px] h-[40px] p-2 bg-[#adb5bd] ml-[10rem] rounded-2xl"
+
+>
+  Post
+</button>
+          </div>
+
+        </div>
+
+
+        {/*post section*/}
+      </div>
 
     <div className='mt-[6rem] bg-[#f8f9fa] h-[14rem] p-3'>
 
