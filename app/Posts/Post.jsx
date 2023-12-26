@@ -1,6 +1,5 @@
 "use client"
 
-import { userAgent } from 'next/server'
 import React, { useState } from 'react'
 
 const Post = () => {
@@ -13,7 +12,7 @@ function getTime(){
   const date = new Date()
   let hours = date.getHours()
   let minutes = date.getMinutes()
- 
+
   //setting time format
   const format =["am", "pm"]; 
   let newTime;//creating a container to hold the Time and format
@@ -28,7 +27,6 @@ newTime = hours + ":" + minutes + format[0]
   setTime(newTime) // setting the time const varaible
 }
  
-
   const [posts, setPosts] = useState([])
   const [userInput, setUserInput] = useState("")
 
@@ -79,7 +77,7 @@ newTime = hours + ":" + minutes + format[0]
 (userInput !=="") &&
 posts.map((post, key)=>(
   <div key={key}
-  className='mt-6 bg-[#f8f9fa] w-[100%] h-[12rem] shadow-sm p-3'
+  className='post mt-6 bg-[#f8f9fa] w-[100%] h-[12rem] shadow-sm p-3'
   > 
   <div className='w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4'>
     </div>
@@ -107,7 +105,7 @@ TD
   <p> {post}</p>
   </div>
 
-<div className="flex ml-[16rem] mt-12 text-[#abd5bd]"> 
+<div className="flex ml-[16rem] mt-12 text-[#3f37c9]"> 
   <p className="text-[1.1rem]">{time} </p>
   </div>
 
@@ -127,7 +125,6 @@ TD
 
         <div className='w-[28px] h-[28px] ml-[20rem] mt-[-2rem]'>
           <svg 
-          onClick={()=>handleDelete(post.id)}
           
           data-slot="icon"
             fill="none"
