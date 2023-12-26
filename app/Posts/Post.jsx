@@ -7,27 +7,27 @@ const Post = () => {
 
   //comfiguring time
   const [time, setTime] = useState("")
-//setting time format 
+
 
 function getTime(){
   const date = new Date()
   let hours = date.getHours()
   let minutes = date.getMinutes()
  
+  //setting time format
   const format =["am", "pm"]; 
-  let newTime;
+  let newTime;//creating a container to hold the Time and format
   if(hours >=12 ){
+    //storing time and format im the container
   newTime = hours + ":" + minutes + format[1];
   } else if(hours <10){
     newTime = hours + ":" + "0" + minutes;
   }else{
 newTime = hours + ":" + minutes + format[0]
   }
-  setTime(newTime)
+  setTime(newTime) // setting the time const varaible
 }
  
-
-
 
   const [posts, setPosts] = useState([])
   const [userInput, setUserInput] = useState("")
@@ -44,14 +44,19 @@ newTime = hours + ":" + minutes + format[0]
     getTime();
   }
 
+  const handleDelete =(id)=>{
+    let newPosts = posts.filter(post=>post.key!==id);
+     setPosts(newPosts)
+  }
+
   return (
     <div>
 
       <div>
         <div className="mt-[2rem] ml-16">
           <textarea
+          onChange ={handleChange}
             value={userInput}
-            onChange={handleChange}
             className='border-2 w-[250px] h-[80px]'
           >
           </textarea>
@@ -83,7 +88,9 @@ TD
     </div>
 
     <div className='w-[28px] h-[28px] ml-[20rem] mt-[-2rem]'>
-    <svg data-slot="icon" 
+    <svg 
+    onClick={()=>handleDelete(post.key)}
+    data-slot="icon" 
     fill="none"
      stroke-width="1.5" 
      stroke="currentColor"
@@ -119,7 +126,10 @@ TD
         </div>
 
         <div className='w-[28px] h-[28px] ml-[20rem] mt-[-2rem]'>
-          <svg data-slot="icon"
+          <svg 
+          onClick={()=>handleDelete(post.id)}
+          
+          data-slot="icon"
             fill="none"
             stroke-width="1.5"
             stroke="currentColor"
@@ -133,13 +143,11 @@ TD
         </div>
 
 
-        <div className='mt-[4rem] ml-4'>
-          <p className='text-[18px]'>Hello @User and welcome to Threadle</p>
+        <div className='mt-[4rem] ml-12'>
+          <p className='text-[18px]'>Hello and welcome to Threadle</p>
         </div>
 
-        <div className='flex ml-[16rem] mt-12 text-[#abd5bd]'>
-          <p className='text-[1.1rem]'>08:40pm</p>
-        </div>
+        
       </div>
 
 
