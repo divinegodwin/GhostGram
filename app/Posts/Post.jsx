@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 
 const Post = () => {
 
@@ -41,6 +41,11 @@ newTime = hours + ":" + minutes + format[0]
     console.log(posts)
     getTime();
   }
+    
+  
+
+  
+  
 
   const handleDelete =(id)=>{
     let newPosts = posts.filter(post=>post.key!==id);
@@ -77,7 +82,7 @@ newTime = hours + ":" + minutes + format[0]
 (userInput !=="") &&
 posts.map((post, key)=>(
   <div key={key}
-  className='post mt-6 bg-[#f8f9fa] w-[100%] h-[12rem] shadow-sm p-3'
+  className='post mt-6 bg-[#f8f9fa] w-[100%] h-auto shadow-sm p-3'
   > 
   <div className='w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4'>
     </div>
@@ -88,6 +93,7 @@ TD
     <div className='w-[28px] h-[28px] ml-[20rem] mt-[-2rem]'>
     <svg 
     onClick={()=>handleDelete(post.key)}
+    maxlength ="10"
     data-slot="icon" 
     fill="none"
      stroke-width="1.5" 
@@ -101,7 +107,7 @@ TD
 </svg>
       </div>
 
-<div className='ml-[6rem] mt-8 '>
+<div className='ml-[4rem] mt-8'>
   <p> {post}</p>
   </div>
 
