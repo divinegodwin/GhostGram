@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect} from 'react'
+import React, { useState} from 'react'
 
 const Post = () => {
 
@@ -19,7 +19,7 @@ function getTime(){
   if(hours >=12 ){
     //storing time and format im the container
   newTime = hours + ":" + minutes + format[1];
-  } else if(hours <10){
+  } else if(hours || minutes<10){
     newTime = hours + ":" + "0" + minutes;
   }else{
 newTime = hours + ":" + minutes + format[0]
@@ -45,10 +45,9 @@ newTime = hours + ":" + minutes + format[0]
   
 
   
-  
 
   const handleDelete =(id)=>{
-    let newPosts = posts.filter(post=>post.key!==id);
+    let newPosts = posts.filter(post=>post.key !==id);
      setPosts(newPosts)
   }
 
@@ -73,11 +72,9 @@ newTime = hours + ":" + minutes + format[0]
             >
               Post
             </button>
-          </div>
-
-        
+          </div>   
 </div>
-        
+    
 {
 (userInput !=="") &&
 posts.map((post, key)=>(

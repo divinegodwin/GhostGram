@@ -1,5 +1,5 @@
 import { Navbar } from "./Navbar/Navbar"
-import Post from "./Posts/Post"
+import Post from "./Posts/page"
 
 export default function Home() {
 

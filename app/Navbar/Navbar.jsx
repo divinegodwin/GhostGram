@@ -1,5 +1,5 @@
 'use client'
-
+import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 
@@ -17,7 +17,7 @@ export const Navbar = () => {
     <div>
         <div className="p-5 shadow-xl text-white flex flex-row gap-60 bg-[#3f37c9] h-[4rem] w-[100%]">
       <div className="ml-2">
-        <h1>Threadle</h1>
+        <h1>Thredle</h1>
       </div>
 
       <div className="h-[30px] w-[30px]" onClick={toggleNav}>
@@ -43,8 +43,15 @@ export const Navbar = () => {
     <div className=" nav w-[100%] bg-[#3f37c9] mt-[-0.75rem] text-white pb-4">
      
       <ul className="flex flex-col gap-4 mt-3 ml-[10rem]  ">
+        
+        <Link href="/">
         <li>Home</li>
+        </Link>
+
+<Link href ="/About">
         <li>About</li>
+        </Link>
+
         <li className="ml-[-1rem]">Contact me</li>
       </ul>
     </div>
