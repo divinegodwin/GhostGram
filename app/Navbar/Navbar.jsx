@@ -51,8 +51,11 @@ export const Navbar = () => {
 <Link href ="/About">
         <li>About</li>
         </Link>
-
+        
+<Link href="/Contact">
         <li className="ml-[-1rem]">Contact me</li>
+      </Link>
+
       </ul>
     </div>
 )}
