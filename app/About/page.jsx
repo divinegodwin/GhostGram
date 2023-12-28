@@ -6,7 +6,11 @@ const About = () =>{
         <div>
             <Navbar h1 ="About Thredle" />
 
-            <h1>About</h1>
+<div className="flex justify-center p-6">
+            <h1 className="text-2xl justify-center">About</h1>
+            
+            </div>
+
         </div>
     )
 }

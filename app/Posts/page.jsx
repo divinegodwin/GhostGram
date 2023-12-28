@@ -19,7 +19,7 @@ function getTime(){
   if(hours >=12 ){
     //storing time and format im the container
   newTime = hours + ":" + minutes + format[1];
-  } else if(hours || minutes<10){
+  } else if(minutes<10){
     newTime = hours + ":" + "0" + minutes;
   }else{
 newTime = hours + ":" + minutes + format[0]
@@ -42,9 +42,6 @@ newTime = hours + ":" + minutes + format[0]
     getTime();
   }
     
-  
-
-  
 
   const handleDelete =(id)=>{
     let newPosts = posts.filter(post=>post.key !==id);
@@ -76,7 +73,6 @@ newTime = hours + ":" + minutes + format[0]
 </div>
     
 {
-(userInput !=="") &&
 posts.map((post, key)=>(
   <div key={key}
   className='post mt-6 bg-[#f8f9fa] w-[100%] h-auto shadow-sm p-3'
