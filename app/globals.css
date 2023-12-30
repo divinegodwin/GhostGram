@@ -2,130 +2,254 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.nav{
+.nav {
     animation: myfades 2s;
 }
 
-@keyframes myfades{
-    
-        from{opacity: 0.5;}
-        to{opacity:1;}
+@keyframes myfades {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
 
 }
 
-.post{
+.post {
     animation: newfade 2s;
 }
 
-@keyframes newfade{
-from{opacity:0.4; margin-top: -2rem;} 
+@keyframes newfade {
+    from {
+        opacity: 0.4;
+        margin-top: -2rem;
+    }
 
-to{opacity:1; margin-top:2rem};
-}
+    to {
+        opacity: 1;
+        margin-top: 2rem
+    }
 
-@media (min-width:961px){
-.text-area{
-    width: 600px;
-    height: 120px;
-    margin-left: 22rem;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.post-btn{
-    width: 200px;
-    height: 50px;
-    margin-left: 51.4rem;
+    ;
 }
 
-.post-div{
-    width: 60%;
-    height: 200px;
-    margin-left: 16rem;
-    border-radius: 15px;
-    margin-top: 6rem;
+@media only screen and (min-width:1024px) {
+    .text-area {
+        width: 45rem;
+        height: 120px;
+        margin-left: 12rem;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .post-btn {
+        width: 200px;
+        height: 80px;
+        margin-left: 49rem;
+    }
+
+    .post-div {
+        width: 80%;
+        height: 16rem;
+        margin-left: 10rem;
+        border-radius: 15px;
+        margin-top: 6rem;
+    }
+
+    .welcome-post {
+        width: 80%;
+        height: 16rem;
+        margin-left: 10rem;
+        border-radius: 15px;
+        margin-top: 6rem;
+    }
+
+    .delete-icon {
+        margin-left: 52rem;
+    }
+
+    .example-text {
+        margin-left: 18rem;
+    }
+
+    .post-description {
+        margin-left: 18rem;
+    }
+
+    .time {
+        margin-left: 33.5rem;
+    }
+
+    .nav-icon {
+        display: none;
+    }
+
+    .navs {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.2rem;
+        width:100%;
+    }
+
+    .nav-items {
+        padding-left: 12rem;
+        margin-top: -3rem;
+    }
+
+    .desktop-nav-container {
+        margin-left: 26rem;
+        color: white;
+        
+    }
+
+    .header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .form {
+        width: 70%;
+        margin-top: 6rem;
+        margin-left: 10rem;
+    }
+
+    .form-item-container {
+        margin-left: 14rem;
+    }
+
+    .about-container {
+        width: 80%;
+        margin-left: 8rem;
+        margin-top: 4rem;
+    }
+
+    .about-description {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 5rem;
+        font-size: x-large;
+    }
+
+    .explore-btn {
+        width: 200px;
+        height: 50px;
+        margin-left: 24rem;
+        margin-top: 4rem;
+    }
+
+    .input{
+        width: 400px;
+    }
 }
 
-.welcome-post{
-    width: 60%;
-    height: 14rem;
-    margin-left: 16rem;
-    border-radius: 15px;
-    margin-top: 6rem;
-}
+@media (min-width:760px) and (max-width: 900px){
 
-.delete-icon{
-    margin-left: 52rem;
-}
-
-.example-text{
-    margin-left: 18rem;
-}
-
-.post-description{
-    margin-left: 18rem;
-}
-
-.time{
-    margin-left: 33.5rem;
-}
-
-.nav-icon{
-    display: none;
-}
-
-.navs{
-    display: flex;
-    flex-direction: row;
-    margin-top:0.2rem
-}
-
-.nav-items{
-    padding-left: 12rem;
-    margin-top: -3rem;
-}
-
-.desktop-nav-container{
-    margin-left: 44rem;
-    color: white;
-}
-
-.header{
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.form{
-    width: 50%;
-     margin-top: 6rem;
-     margin-left: 20rem;
-}
-.form-item-container{
-    margin-left: 14rem;
-}
-
-.about-container{
-    width: 50%; 
-    margin-left: 20rem;
-    margin-top: 4rem;
-}
-
-.about-description{
-    padding-left: 5rem;
-    padding-right: 5rem ;
-    padding-top: 2rem;
-    font-size: x-large;
-}
-
-.explore-btn{
-    width: 200px;
-    height: 50px;
-    margin-left: 18rem;
-}
+    .text-area {
+        width: 35rem;
+        height: 120px;
+        margin-left: 4rem;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .post-btn {
+        width: 200px;
+        height: 60px;
+        margin-left: 31rem;
+    }
+    .post-div {
+        width: 80%;
+        height: 16rem;
+        margin-left: 6rem;
+        border-radius: 15px;
+        margin-top: 6rem;
+    }
+    .welcome-post {
+        width: 80%;
+        height: 16rem;
+        margin-left: 6rem;
+        border-radius: 15px;
+        margin-top: 6rem;
+    }
+    .delete-icon {
+        margin-left: 34rem;
+    }
+    .example-text {
+        margin-left: 10rem;
+    }
+    .post-description {
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+    .time {
+        margin-left: 17rem;
+        margin-top: 2rem;
+    }
+    .nav-icon {
+        display: none;
+    }
+    .navs {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.2rem;
+        width:100%;
+    }
+    .nav-items {
+        padding-left: 3rem;
+        margin-top: -3rem;
+    }
+    .desktop-nav-container {
+        margin-left: 26rem;
+        color: white;
+        
+    }
+    .header {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .form {
+        width: 70%;
+        margin-top: 6rem;
+        margin-left: 10rem;
+        height: 40rem;
+    }
+    .form-item-container {
+        margin-left: 5rem;
+        margin-top: 6rem;
+    }
+    .about-container {
+        width: 80%;
+        margin-left: 5rem;
+        margin-top: 4rem;
+        height: 40rem;
+    }
+    .about-description {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 5rem;
+        font-size: x-large;
+    }
+    .explore-btn {
+        width: 200px;
+        height: 70px;
+        margin-left: 14rem;
+        margin-top: 4rem;
+    }
+    .input{
+        width: 300px;
+    }   
+    
+    .send-btn{
+        margin-left: 3.8rem;
+        width: 300px;
+        height: 60px;
+    }
 }

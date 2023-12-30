@@ -42,7 +42,7 @@ export const Navbar = () => {
     {opened && (
     <div className=" nav w-[100%] bg-[#3f37c9] mt-[-0.75rem] text-white pb-4">
      
-      <ul className="flex flex-col gap-4 mt-3 ml-[10rem]  ">
+      <ul className=" nav-ul flex flex-col gap-4 mt-3 ml-[10rem]  ">
         
         <Link href="/">
         <li>Home</li>

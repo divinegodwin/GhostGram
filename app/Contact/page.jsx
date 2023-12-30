@@ -35,7 +35,7 @@ const Contact = () => {
           </label>
           <input
             type="email"
-            className="w-[250px] h-[40px] mt-2 border-2 rounded-lg p-4"
+            className=" input w-[250px] h-[40px] mt-2 border-2 rounded-lg p-4"
             onChange={handleName}
             placeholder="input your name"
           ></input>
@@ -47,7 +47,7 @@ const Contact = () => {
           </label>
           <input
             type="text"
-            className="w-[250px] h-[40px] mt-2 border-2 rounded-lg p-4"
+            className="input w-[250px] h-[40px] mt-2 border-2 rounded-lg p-4"
             onChange={handleEmail}
             placeholder="input your email"
           ></input>
@@ -62,12 +62,12 @@ const Contact = () => {
             cols={20}
             rows={6}
             placeholder="Enter max 20 characters"
-            className="w-[250px] h-[90px] mt-2 border-2 rounded-lg p-4"
+            className="input w-[250px] h-[90px] mt-2 border-2 rounded-lg p-4"
           ></textarea>
         </div>
 
         <div>
-          <button className="w-[200px] h-[45px] mt-4 bg-[#3f37c9] text-white rounded-lg ml-[5rem]">
+          <button className="send-btn w-[200px] h-[45px] mt-4 bg-[#3f37c9] text-white rounded-lg ml-[5rem]">
             Send
           </button>
         </div>
