@@ -22,6 +22,7 @@ export const Navbar = () => {
 
       <div className="nav-icon h-[30px] w-[30px]" onClick={toggleNav}>
         <svg
+        className="nav-icon-icon"
           data-slot="icon"
           fill="none"
           stroke-width="1.5"

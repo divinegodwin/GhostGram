@@ -42,6 +42,61 @@
     ;
 }
 
+@media(max-width:420px){
+    .text-area {
+    width: 16rem;
+    height: 120px;
+    margin-left: -1rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+.post-btn {
+    width: 100px;
+    height: 50px;
+    margin-left: 13rem;
+}
+
+.nav-icon-icon{
+    display: block;
+    width: 30px;
+    margin-left: -2rem;
+}
+
+
+.delete-icon {
+    margin-left: 18rem;
+}
+
+.about-container {
+    width: 80%;
+    margin-left: 2rem;
+    margin-top: 4rem;
+}
+.about-description {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    font-size: 16px;
+}
+.explore-btn {
+    width: 120px;
+    height: 50px;
+    margin-left: 5rem;
+    margin-top: 1.5rem;
+}
+
+.send-btn{
+    margin-left: 3.8rem;
+    width:250px;
+    height: 50px;
+}
+
+.form-item-container {
+    margin-left: -1rem;
+}
+
+}
+
 @media only screen and (min-width:1024px) {
     .text-area {
         width: 45rem;
@@ -148,6 +203,10 @@
 
     .input{
         width: 400px;
+    }
+
+    .delete-icon {
+        margin-left: rem;
     }
 }
 
