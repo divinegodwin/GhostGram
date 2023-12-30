@@ -17,10 +17,10 @@ export const Navbar = () => {
     <div>
         <div className="p-5 shadow-xl text-white flex flex-row gap-60 bg-[#3f37c9] h-[4rem] w-[100%]">
       <div className="ml-2">
-        <h1>Thredle</h1>
+        <h1 className="header">Thredle</h1>
       </div>
 
-      <div className="h-[30px] w-[30px]" onClick={toggleNav}>
+      <div className="nav-icon h-[30px] w-[30px]" onClick={toggleNav}>
         <svg
           data-slot="icon"
           fill="none"
@@ -59,6 +59,24 @@ export const Navbar = () => {
       </ul>
     </div>
 )}
+
+<div className="desktop-nav-container">
+<ul className=" navs hidden ">
+        
+        <Link href="/">
+        <li className="nav-items">Home</li>
+        </Link>
+
+<Link href ="/About">
+        <li className="nav-items">About</li>
+        </Link>
+        
+<Link href="/Contact">
+        <li className=" nav-items ml-[-1rem]">Contact me</li>
+      </Link>
+
+      </ul>
+</div>
 
     </div>
   );

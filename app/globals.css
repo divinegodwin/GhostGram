@@ -28,3 +28,104 @@ from{opacity:0.4; margin-top: -2rem;}
 
 to{opacity:1; margin-top:2rem};
 }
+
+@media (min-width:961px){
+.text-area{
+    width: 600px;
+    height: 120px;
+    margin-left: 22rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.post-btn{
+    width: 200px;
+    height: 50px;
+    margin-left: 51.4rem;
+}
+
+.post-div{
+    width: 60%;
+    height: 200px;
+    margin-left: 16rem;
+    border-radius: 15px;
+    margin-top: 6rem;
+}
+
+.welcome-post{
+    width: 60%;
+    height: 14rem;
+    margin-left: 16rem;
+    border-radius: 15px;
+    margin-top: 6rem;
+}
+
+.delete-icon{
+    margin-left: 52rem;
+}
+
+.example-text{
+    margin-left: 18rem;
+}
+
+.post-description{
+    margin-left: 18rem;
+}
+
+.time{
+    margin-left: 33.5rem;
+}
+
+.nav-icon{
+    display: none;
+}
+
+.navs{
+    display: flex;
+    flex-direction: row;
+    margin-top:0.2rem
+}
+
+.nav-items{
+    padding-left: 12rem;
+    margin-top: -3rem;
+}
+
+.desktop-nav-container{
+    margin-left: 44rem;
+    color: white;
+}
+
+.header{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form{
+    width: 50%;
+     margin-top: 6rem;
+     margin-left: 20rem;
+}
+.form-item-container{
+    margin-left: 14rem;
+}
+
+.about-container{
+    width: 50%; 
+    margin-left: 20rem;
+    margin-top: 4rem;
+}
+
+.about-description{
+    padding-left: 5rem;
+    padding-right: 5rem ;
+    padding-top: 2rem;
+    font-size: x-large;
+}
+
+.explore-btn{
+    width: 200px;
+    height: 50px;
+    margin-left: 18rem;
+}
+}

@@ -12,10 +12,10 @@ const About = () =>{
             
             </div>
 
-            <div className="m  p-1 ml-5 w-[90%] h-[400px] rounded-lg shadow-lg">
+            <div className="about-container p-1 ml-5 w-[90%] h-[400px] rounded-lg shadow-lg">
                <div>
-                <p className="tracking-wide flex justify-center pt-4 ">
-                <span className="font-bold pl-2 mt-2 pr-6">Welcome to Thredle– </span>
+                <p className=" about-description tracking-wide flex justify-center pt-4">
+                Welcome to Thredle,
                 where your thought take center stage! We're your go-to app for 
                  collecting and showcasing your ideas effortlessly. 
                  With Thredle, inputting and displaying your moments is
@@ -26,7 +26,7 @@ const About = () =>{
 
          <Link href="/">
             <div>
-            <button className="p-3 mt-8 rounded-lg ml-[8rem] w-[110px] h-[50px] bg-[#3f37c9] text-white ">Explore</button>
+            <button className=" explore-btn p-3 mt-8 rounded-lg ml-[8rem] w-[110px] h-[50px] bg-[#3f37c9] text-white ">Explore</button>
             </div>
 </Link>
 
