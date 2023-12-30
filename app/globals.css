@@ -104,6 +104,14 @@
 
 }
 
+@media(max-width:480px){
+   
+   
+   .time{
+    margin-left: 1rem;
+   }
+}
+
 @media only screen and (min-width:1024px) {
     .text-area {
         width: 45rem;
