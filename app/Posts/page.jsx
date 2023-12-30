@@ -78,6 +78,7 @@ const Post = () => {
 
           <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
             <svg
+            className="delete-icon-icon"
               onClick={() => handleDelete(post.key)}
               maxlength="10"
               data-slot="icon"
@@ -115,6 +116,7 @@ const Post = () => {
 
         <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
           <svg
+          className="delete-icon-icon"
             data-slot="icon"
             fill="none"
             stroke-width="1.5"
