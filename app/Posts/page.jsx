@@ -134,7 +134,7 @@ const Post = () => {
         </div>
 
         <div className="mt-[4rem] ml-12">
-          <p className="example-text text-[18px]">Hello and welcome to Thredle,<br/> no databse integration to store items yet.</p>
+          <p className="example-text text-[18px]">Hello and welcome to Thredle,<br/> no database integration to store items yet.</p>
         </div>
       </div>
     </div>
