@@ -42,6 +42,7 @@ const Post = () => {
       .insert([
         {
           post: userInput,
+        
         }])
       if(data){
         console.log(data)
