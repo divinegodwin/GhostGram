@@ -59,7 +59,7 @@ sendToDataBase()
   useEffect(()=>{
       const fetchData = async() =>{
         try{
-        const{data, error} = await supabase .from('Post').select('post')
+        const{data, error} = await supabase .from('Post').select('post').order('created_at', { ascending: false });
         if(data){
       setPosts(data.map(entry=>(entry.post)))
         }if(error){
