@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import supabase from "../supabaseClient";
 
 const Post = () => {
   //comfiguring time
@@ -30,19 +31,51 @@ const Post = () => {
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
-
   //when the button is clicked if stores the user input into an array of post
-
   const postButton = () => {
     setPosts((prevPost) => [userInput, ...prevPost]);
-    console.log(posts);
     getTime();
+ 
+    const sendToDataBase = async ()=>{
+      try{
+      const {data, error} = await supabase .from('Post')
+      .insert([
+        {
+          post: userInput,
+        }])
+      if(data){
+        console.log(data)
+      }
+      if(error){
+        console.log('an error occured', error)
+      }
+  }catch(error){
+    console.log('an unexpected error occured')
+  }
+}
+sendToDataBase()
   };
+  useEffect(()=>{
+      const fetchData = async() =>{
+        try{
+        const{data, error} = await supabase .from('Post').select('post')
+        if(data){
+      setPosts(data.map(entry=>(entry.post)))
+        }if(error){
+          console.log('error fetching data', error)
+        }
+        }catch(error){
+          console.log('an error occured while fetching data', error)
+        }
+    }
+    fetchData()
+  },[])
 
   const handleDelete = (index) => {
     let newPosts = [...posts];
     newPosts.splice(index, 1);
     setPosts(newPosts);
+
   }
 
   return (
@@ -78,7 +111,6 @@ const Post = () => {
 
           <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
             <svg
-            className="delete-icon-icon"
               onClick={() => handleDelete(post.key)}
               maxlength="10"
               data-slot="icon"
@@ -116,7 +148,6 @@ const Post = () => {
 
         <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
           <svg
-          className="delete-icon-icon"
             data-slot="icon"
             fill="none"
             stroke-width="1.5"
@@ -134,7 +165,7 @@ const Post = () => {
         </div>
 
         <div className="mt-[4rem] ml-12">
-          <p className="example-text text-[18px]">Hello and welcome to Thredle,<br/> no database integration to store items yet.</p>
+          <p className="example-text text-[18px]">Hello and welcome to Thredle</p>
         </div>
       </div>
     </div>
