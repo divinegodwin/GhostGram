@@ -23,7 +23,12 @@ const Post = () => {
       newTime = hours + ":" + minutes + format[0];
     }
     setTime(newTime); // setting the time const varaible
+    return newTime //returning the time string
   }
+
+  useEffect(()=>{
+    let timeString = getTime()
+  })
 
   const [posts, setPosts] = useState([]);
   const [userInput, setUserInput] = useState("");
@@ -33,33 +38,38 @@ const Post = () => {
   };
   //when the button is clicked if stores the user input into an array of post
   const postButton = () => {
+    if(userInput != ''){
     setPosts((prevPost) => [userInput, ...prevPost]);
     getTime();
+    let timeString = getTime()
+    console.log(timeString+ 'at clicked button')
  
-    const sendToDataBase = async ()=>{
+    const sendToDataBase = async ()=>{ //sending data to database
       try{
       const {data, error} = await supabase .from('Post')
       .insert([
         {
-          post: userInput,
-        
+          post: userInput,  
+          time: timeString
         }])
       if(data){
         console.log(data)
       }
       if(error){
-        console.log('an error occured', error)
+        console.log('an error occured while sending to database', error)
       }
   }catch(error){
     console.log('an unexpected error occured')
   }
 }
-sendToDataBase()
+sendToDataBase()//calling the function
+}
   };
+
   useEffect(()=>{
-      const fetchData = async() =>{
+      const fetchData = async() =>{ // fuction to fetch data from database
         try{
-        const{data, error} = await supabase .from('Post').select('post').order('created_at', { ascending: false });
+        const{data, error} = await supabase .from('Post').select('post').order('created_at', { ascending: false });//fetching the data from new to old
         if(data){
       setPosts(data.map(entry=>(entry.post)))
         }if(error){
@@ -67,16 +77,15 @@ sendToDataBase()
         }
         }catch(error){
           console.log('an error occured while fetching data', error)
-        }
+     }
     }
-    fetchData()
+    fetchData()// calling the fetch function
   },[])
 
   const handleDelete = (index) => {
     let newPosts = [...posts];
     newPosts.splice(index, 1);
     setPosts(newPosts);
-
   }
 
   return (
