@@ -16,6 +16,7 @@ const Account = () => {
 
   const handleCreateAccount =async (e)=>{
     e.preventDefault()
+    console.log('Form submitted');
     if(!username|| !password|| !birthdate|| !gender){//form validation
         setError('Fill in all inputs')
         return;
@@ -34,21 +35,16 @@ const Account = () => {
         gender: gender
       }
     ])
+    console.log(data)
+    router.push('/Posts')
 
-    if(data){
-      console.log(data)
-      router.push('/Posts')
-    
-    }
     if(error){
       console.log('error occured sending account to database', error)
     }
   
   }catch(error){
     console.log('an error occured', error)
-  
   } 
- 
   }
 
   return (
@@ -113,7 +109,7 @@ const Account = () => {
 </div>
 </div>
 
-<button className='w-[220px] p-2 h-[50px] border-2 rounded-lg border-[#3f37c9]'>CREATE ACCOUNT</button>
+<button type='submit' className='w-[220px] p-2 h-[50px] border-2 rounded-lg border-[#3f37c9]'>CREATE ACCOUNT</button>
 
 </div>  
   </form>

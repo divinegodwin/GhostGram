@@ -79,7 +79,7 @@ try{
             value={password}
           ></input>
         </div>
-        <button className="w-[220px] p-2 h-[50px] focus:bg-[#3f37c9] focus:text-white border-2 ml-12 rounded-lg border-[#3f37c9]">
+        <button type="submit" className="w-[220px] p-2 h-[50px] focus:bg-[#3f37c9] focus:text-white border-2 ml-12 rounded-lg border-[#3f37c9]">
           Submit
         </button>
 
