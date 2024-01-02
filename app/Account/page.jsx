@@ -79,7 +79,13 @@ const Account = () => {
      onChange={(e)=>setBirthdate(e.target.value)}
      type='date'
      value={birthdate}
-    className=' border-2 p-6 rounded-lg'
+    className='w-[220px] h-[40px] border-2 p-6 rounded-lg'
+    style={{
+      // Add additional styles for web browsers/ operating syatems
+      WebkitAppearance: 'none', // Disable default styling on Safari
+      MozAppearance: 'none',    // Disable default styling on Firefox
+      appearance: 'none',       // Disable default styling on other browsers
+    }}
     >
        </input>
 
