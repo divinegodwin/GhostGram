@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import supabase from "../supabaseClient";
+import { Navbar } from "../Navbar/Navbar";
 
 const Post = () => {
   //comfiguring time
@@ -28,6 +29,7 @@ const Post = () => {
 
   useEffect(()=>{
     let timeString = getTime()
+    setTime(timeString)
   })
 
   const [posts, setPosts] = useState([]);
@@ -69,9 +71,9 @@ sendToDataBase()//calling the function
   useEffect(()=>{
       const fetchData = async() =>{ // fuction to fetch data from database
         try{
-        const{data, error} = await supabase .from('Post').select('post').order('created_at', { ascending: false });//fetching the data from new to old
+        const{data, error} = await supabase .from('Post').select('post,username,time').order('created_at', { ascending: false });//fetching the data from new to old
         if(data){
-      setPosts(data.map(entry=>(entry.post)))
+      setPosts(data.map((entry)=>({post:entry.post, time:entry.time, username:entry.username})))// setting and fetching from the columns by mapping through and assignning each column to its value
         }if(error){
           console.log('error fetching data', error)
         }
@@ -82,14 +84,15 @@ sendToDataBase()//calling the function
     fetchData()// calling the fetch function
   },[])
 
-  const handleDelete = (index) => {
+  /*const handleDelete = (index) => {
     let newPosts = [...posts];
     newPosts.splice(index, 1);
     setPosts(newPosts);
-  }
+  }*/
 
   return (
     <div>
+      <div><Navbar/></div>
       <div>
         <div className="mt-[2rem] ml-16">
           <textarea
@@ -108,7 +111,7 @@ sendToDataBase()//calling the function
           </button>
         </div>
       </div>
-
+      
       {posts.map((post, Index) => (
         <div
           key={Index}
@@ -118,6 +121,7 @@ sendToDataBase()//calling the function
           <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
             TD
           </div>
+          <div><p>{post.username}</p></div>
 
           <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
             <svg
@@ -140,11 +144,11 @@ sendToDataBase()//calling the function
           </div>
 
           <div className="post-description ml-[4rem] mt-8">
-            <p> {post}</p>
+            <p> {post.post}</p>
           </div>
 
           <div className="flex ml-[16rem] mt-12 text-[#3f37c9]">
-            <p className="time text-[1.1rem]">{time} </p>
+            <p className="time text-[1.1rem]">{post.time} </p>
           </div>
         </div>
       ))}
