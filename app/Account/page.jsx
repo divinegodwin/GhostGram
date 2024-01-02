@@ -79,7 +79,7 @@ const Account = () => {
      onChange={(e)=>setBirthdate(e.target.value)}
      type='date'
      value={birthdate}
-    className='w-[220px] h-[40px] border-2'
+    className='w-[220px] h-[40px] border-2 p-6 rounded-lg'
     >
        </input>
 
