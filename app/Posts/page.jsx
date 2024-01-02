@@ -45,7 +45,8 @@ const Post = () => {
     getTime();
     let timeString = getTime()
     console.log(timeString+ 'at clicked button')
- 
+      setUserInput('')
+
     const sendToDataBase = async ()=>{ //sending data to database
       try{
       const {data, error} = await supabase .from('Post')
@@ -64,16 +65,17 @@ const Post = () => {
     console.log('an unexpected error occured')
   }
 }
+
 sendToDataBase()//calling the function
 }
-  };
+    }
 
-  useEffect(()=>{
+
       const fetchData = async() =>{ // fuction to fetch data from database
         try{
-        const{data, error} = await supabase .from('Post').select('post,username,time').order('created_at', { ascending: false });//fetching the data from new to old
+        const{data, error} = await supabase .from('Post').select('post,time').order('created_at', { ascending: false });//fetching the data from new to old
         if(data){
-      setPosts(data.map((entry)=>({post:entry.post, time:entry.time, username:entry.username})))// setting and fetching from the columns by mapping through and assignning each column to its value
+      setPosts(data.map((entry)=>({post:entry.post, time:entry.time})))// setting and fetching from the columns by mapping through and assignning each column to its value
         }if(error){
           console.log('error fetching data', error)
         }
@@ -82,7 +84,7 @@ sendToDataBase()//calling the function
      }
     }
     fetchData()// calling the fetch function
-  },[])
+
 
   /*const handleDelete = (index) => {
     let newPosts = [...posts];
