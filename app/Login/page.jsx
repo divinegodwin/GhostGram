@@ -45,8 +45,7 @@ try{
         console.log('try error occured at login page', error)
         setError('user not found')
       } 
-    }
-   
+    } 
   if (isLoggedIn) {
     // User is logged in, don't render the Login component
     return null;//This means the Login component won't be rendered

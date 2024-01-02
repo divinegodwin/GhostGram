@@ -14,17 +14,16 @@ const Account = () => {
   const [error, setError] = useState('')
   //setting up supabase
 
-  const handleCreateAccount = (e)=>{
+  const handleCreateAccount =async (e)=>{
     e.preventDefault()
     if(!username|| !password|| !birthdate|| !gender){//form validation
         setError('Fill in all inputs')
         return;
     }
     if(password.length <=6){
-     setError('password should be more than 10 characters')
+     setError('password should be more than 6 characters')
      return;
     }
-  const sendAccountToSupabase = async () =>{
     try{
     const {data, error} = await supabase.from('Account')
     .insert([
@@ -36,7 +35,7 @@ const Account = () => {
       }
     ])
 
-    if(data  && data.length > 0){
+    if(data){
       console.log(data)
       router.push('/Posts')
     
@@ -49,8 +48,6 @@ const Account = () => {
     console.log('an error occured', error)
   
   } 
-}
-sendAccountToSupabase()
  
   }
 
