@@ -9,7 +9,7 @@ const Account = () => {
 //form input state
   const[username, setUsername] = useState('')
   const[password, setPassword] = useState('')
-  const [birthdate, setBirthdate] = useState('')
+  const [birthdate, setBirthdate] = useState(Date().getFullYear)
   const [gender, setGender] = useState('')
   const [error, setError] = useState('')
   //setting up supabase
