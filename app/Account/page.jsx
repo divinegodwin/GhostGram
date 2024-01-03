@@ -127,7 +127,7 @@ const Account = () => {
 
           <button
             type="submit"
-            className="w-[220px] p-2 h-[50px] border-2 rounded-lg border-[#3f37c9]"
+            className="w-[220px] p-2 h-[50px] border-2 text-white rounded-lg bg-[#3f37c9]"
           >
             CREATE ACCOUNT
           </button>

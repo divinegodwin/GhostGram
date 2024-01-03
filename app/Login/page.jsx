@@ -78,7 +78,7 @@ try{
             placeholder="password > 6 chars"
             value={password}
           ></input>
-                  <button type="submit" className="w-[220px] p-2 h-[50px] focus:bg-[#3f37c9] focus:text-white border-2 ml-1 rounded-lg border-[#3f37c9]">
+                  <button type="submit" className="w-[220px] p-2 h-[50px] text-white border-2 ml-1 rounded-lg bg-[#3f37c9]">
           Submit
         </button>
         </div>
