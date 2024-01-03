@@ -277,23 +277,26 @@
     .delete-icon {
         margin-left: rem;
     }
-    .form{
-        width: 30%;
+    .auth-form{
+        width: 40%;
         margin-top: 8rem;
         margin-left: 30rem;
     }
     .inputs-container{
         margin-left: 7rem;
     }
+    .inputs-login-container{
+        margin-left: 10rem;
+    }
     .account-heading{
         margin-top: 2rem;
         margin-left: 8rem;
     }
     .create-account{
-        margin-left: 3rem;
+        margin-left: 6rem;
     }
     .login-heading{
-        margin-left:11rem;
+        margin-left:14rem;
     }
 }
 

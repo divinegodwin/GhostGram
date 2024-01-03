@@ -50,7 +50,7 @@ const Account = () => {
   return (
     <div>
 
-      <form onSubmit={handleCreateAccount} className=' form w-[80%] h-[500px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg'>
+      <form onSubmit={handleCreateAccount} className=' auth-form w-[80%] h-[500px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg'>
 
     <div className='account-heading pt-[1rem] font-bold text-lg'>Create an Account</div>
     {/* rendering error state if there is any*/}
