@@ -115,7 +115,12 @@
 .login-heading{
     margin-left:7rem;
 }
-
+.inputs-login-container{
+    margin-left: 1rem;
+}
+.auth-login-form{
+    margin-left: 0.4rem;
+}
 
 }
 
