@@ -298,6 +298,9 @@
     .login-heading{
         margin-left:14rem;
     }
+    .forgotten-password{
+        margin-left:6rem;
+    }
 }
 
 @media (min-width:760px) and (max-width: 900px){

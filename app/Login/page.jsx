@@ -83,8 +83,8 @@ try{
         </button>
         </div>
 
-<div>
-  <p className="pl-[6rem] text-red-500">forgotten password ?</p>
+<div  className="forgotten-password">
+  <p className=" pl-[6rem] text-red-500">forgotten password ?</p>
 </div>
 
             
