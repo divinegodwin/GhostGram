@@ -83,6 +83,9 @@ try{
         </button>
         </div>
 
+<div>
+  <p className="pl-[6rem] text-red-500">forgotten password ?</p>
+</div>
 
             
         <div className="mt-4">
