@@ -35,7 +35,7 @@ const Account = () => {
       
       if(data.length > 0){
         setError("username already exist")
-        return(
+        return;
         }
 
     try {
