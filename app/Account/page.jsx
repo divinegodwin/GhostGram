@@ -84,7 +84,7 @@ const Account = () => {
           <input
             onChange={(e) => setPassword(e.target.value)}
             className="w-[220px] h-[40px] border-2 p-6 rounded-lg outline-[#3f37c9]"
-            type="text"
+            type="password"
             placeholder="password > 6 chars"
             value={password}
           ></input>
