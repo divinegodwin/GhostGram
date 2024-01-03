@@ -33,10 +33,6 @@ const Account = () => {
       .select("username")
       .eq("username", username);
 
-    if (data) {
-      setError("user already exist");
-      return;
-    }
     try {
       //if user does not exist yo perform this action for me
       const { data, error } = await supabase.from("Account").insert([
