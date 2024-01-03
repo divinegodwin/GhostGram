@@ -45,7 +45,7 @@ export const Navbar = () => {
      
       <ul className=" nav-ul flex flex-col gap-4 mt-3 ml-[10rem]  ">
         
-        <Link href="/">
+        <Link href="/Posts">
         <li>Home</li>
         </Link>
 
