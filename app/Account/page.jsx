@@ -32,6 +32,10 @@ const Account = () => {
       .from("Account") //check if user exist
       .select("username")
       .eq("username", username);
+      
+      if(data.length >0){
+        setError("username taken")
+        }
 
     try {
       //if user does not exist yo perform this action for me
