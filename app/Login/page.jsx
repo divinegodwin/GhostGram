@@ -55,7 +55,7 @@ try{
     <div>
       <form
         onSubmit={handleLogin}
-        className=" auth-form rounded-lg placeholder:w-[80%] h-[460px] flex flex-col gap-6 ml-[2rem] mt-[8rem] shadow-lg"
+        className="auth-form rounded-lg placeholder:w-[80%] h-[480px] flex flex-col gap-6 ml-[2rem] mt-[4rem] shadow-lg"
       >
         <div className="login-heading ml-[7.6rem] pt-[2rem] font-bold text-2xl">Sign In</div>
         {error && (
@@ -88,7 +88,7 @@ try{
 </div>
 
             
-        <div className="mt-4">
+        <div className="mt-2 ">
           <Link href='/Account'>
           <button className="create-account pl-[6rem] focus:text-[red] text-[grey] text-lg">Create an account</button>
           </Link>

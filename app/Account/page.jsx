@@ -9,7 +9,7 @@ const Account = () => {
 //form input state
   const[username, setUsername] = useState('')
   const[password, setPassword] = useState('')
-  const [birthdate, setBirthdate] = useState(Date().getFullYear)
+ // const [birthdate, setBirthdate] = useState()
   const [gender, setGender] = useState('')
   const [error, setError] = useState('')
   //setting up supabase
@@ -17,7 +17,7 @@ const Account = () => {
   const handleCreateAccount =async (e)=>{
     e.preventDefault()
     console.log('Form submitted');
-    if(!username|| !password|| !birthdate|| !gender){//form validation
+    if(!username|| !password|| !gender){//form validation
         setError('Fill in all inputs')
         return;
     }
@@ -31,7 +31,6 @@ const Account = () => {
       {
         username:username,
         password:password,
-        dob:birthdate,
         gender: gender
       }
     ])
@@ -50,7 +49,7 @@ const Account = () => {
   return (
     <div>
 
-      <form onSubmit={handleCreateAccount} className=' auth-form w-[80%] h-[500px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg'>
+      <form onSubmit={handleCreateAccount} className=' auth-form w-[80%] h-[400px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg'>
 
     <div className='account-heading pt-[1rem] font-bold text-lg'>Create an Account</div>
     {/* rendering error state if there is any*/}
@@ -75,6 +74,7 @@ const Account = () => {
  value={password}
  ></input>
     
+    {/*
     <input
      onChange={(e)=>setBirthdate(e.target.value)}
      type='date'
@@ -82,6 +82,7 @@ const Account = () => {
     className='w-[220px] h-[40px] text-black p-6 rounded-lg'
 >
        </input>
+    */}
 
 <div className='flex flex-row gap-8'>
 <div>
