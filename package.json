@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mui/lab": "^5.0.0-alpha.158",
+    "@mui/x-date-pickers": "^6.18.6",
     "@supabase/supabase-js": "^2.39.1",
+    "dayjs": "^1.11.10",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

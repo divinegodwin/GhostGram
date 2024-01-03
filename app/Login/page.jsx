@@ -55,14 +55,14 @@ try{
     <div>
       <form
         onSubmit={handleLogin}
-        className=" rounded-lg placeholder:w-[80%] h-[460px] flex flex-col gap-6 ml-[2rem] mt-[8rem] shadow-lg"
+        className=" form rounded-lg placeholder:w-[80%] h-[460px] flex flex-col gap-6 ml-[2rem] mt-[8rem] shadow-lg"
       >
-        <div className="ml-[7.6rem] pt-[2rem] font-bold text-2xl">Sign In</div>
+        <div className="login-heading ml-[7.6rem] pt-[2rem] font-bold text-2xl">Sign In</div>
         {error && (
   <div><p className='text-[red] pl-9'>{error}</p></div>
 )}
 
-        <div className="flex flex-col gap-6 ml-[3rem] mt-4">
+        <div className="inputs-login-container flex flex-col gap-6 ml-[3rem] mt-4">
           <input
             onChange={(e) => setUsername(e.target.value)}
             className="w-[220px] h-[40px] border-4 p-6 rounded-lg outline-[#3f37c9]"
@@ -78,15 +78,16 @@ try{
             placeholder="password > 6 chars"
             value={password}
           ></input>
-        </div>
-        <button type="submit" className="w-[220px] p-2 h-[50px] focus:bg-[#3f37c9] focus:text-white border-2 ml-12 rounded-lg border-[#3f37c9]">
+                  <button type="submit" className="w-[220px] p-2 h-[50px] focus:bg-[#3f37c9] focus:text-white border-2 ml-1 rounded-lg border-[#3f37c9]">
           Submit
         </button>
+        </div>
+
 
             
         <div className="mt-4">
           <Link href='/Account'>
-          <button className="pl-[6rem] focus:text-[red] text-[grey] text-lg">Create an account</button>
+          <button className="create-account pl-[6rem] focus:text-[red] text-[grey] text-lg">Create an account</button>
           </Link>
           </div>
       </form>

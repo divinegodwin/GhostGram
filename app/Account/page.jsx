@@ -50,14 +50,14 @@ const Account = () => {
   return (
     <div>
 
-      <form onSubmit={handleCreateAccount} className=' w-[80%] h-[480px] flex flex-col gap-6 ml-[2rem] mt-[8rem] shadow-lg'>
+      <form onSubmit={handleCreateAccount} className=' form w-[80%] h-[500px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg'>
 
-    <div className='ml-[5rem] pt-13 font-bold text-lg'>Create an Account</div>
+    <div className='account-heading pt-[1rem] font-bold text-lg'>Create an Account</div>
     {/* rendering error state if there is any*/}
     {error && (
       <div><p className='text-[red] pl-9'>{error}</p></div>
     )}
-    <div className='flex flex-col gap-6 ml-[3rem]'>
+    <div className='inputs-container flex flex-col gap-6 ml-[3rem]'>
     <input
     onChange={(e)=>setUsername(e.target.value)}
     className='w-[220px] h-[40px] border-2 p-6 rounded-lg outline-[#3f37c9]'
@@ -80,13 +80,7 @@ const Account = () => {
      type='date'
      value={birthdate}
     className='w-[220px] h-[40px] text-black p-6 rounded-lg'
-    style={{
-      // Add additional styles for web browsers/ operating syatems
-      WebkitAppearance: 'none', // Disable default styling on Safari
-      MozAppearance: 'none',    // Disable default styling on Firefox
-      appearance: 'none',       // Disable default styling on other browsers
-    }}
-    >
+>
        </input>
 
 <div className='flex flex-row gap-8'>
