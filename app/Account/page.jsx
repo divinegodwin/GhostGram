@@ -34,7 +34,7 @@ const Account = () => {
       .eq("username", username);
       
       if(data.length > 0){
-        setError("username already exist")
+        setError("username already exist");
         return;
         }
 
