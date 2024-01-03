@@ -1,10 +1,15 @@
 
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { LocalizationProvider } from '@mui/x-date-pickers';
-
+import { Poppins } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight:'400'
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
          
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     
     </html>
   )

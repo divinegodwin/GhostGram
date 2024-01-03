@@ -18,8 +18,6 @@ const Post = () => {
     if (hours >= 12) {
       //storing time and format im the container
       newTime = hours + ":" + minutes + format[1];
-    } else if (minutes < 10) {
-      newTime = hours + ":" + "0" + minutes;
     } else {
       newTime = hours + ":" + minutes + format[0];
     }
