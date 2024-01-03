@@ -84,13 +84,13 @@ try{
         </div>
 
 <div  className="forgotten-password">
-  <p className=" pl-[6rem] text-red-500">forgotten password ?</p>
+  <p className=" pl-[6rem] text-red-500 forgotten-password">forgotten password ?</p>
 </div>
 
             
         <div className="mt-2 ">
           <Link href='/Account'>
-          <button className="create-account pl-[6rem] focus:text-[red] text-[grey] text-lg">Create an account</button>
+          <button className="create-account pl-[6rem] focus:text-[red] text-[grey] text-lg">Create an Account</button>
           </Link>
           </div>
       </form>

@@ -41,7 +41,7 @@
 }
    
    
-@media(max-width:410px){
+@media(max-width:420px){
     .text-area {
     width: 16rem;
     height: 120px;
@@ -90,41 +90,27 @@
     height: 50px;
 }
 
-.form-item-container {
-    margin-left: -1rem;
-}
-.delete-icon-icon {
-    margin-left: -2rem;
-    width: 30px;
-}
-.example-text {
-    margin-left: 2rem;
-}
-
-.inputs-container{
-    margin-left: 3rem;
-}
-
-.account-heading{
-    margin-top: 2rem;
-    margin-left: 4rem;
-}
-.create-account{
-    margin-left: -1rem;
-}
-.login-heading{
-    margin-left:7rem;
-}
-.inputs-login-container{
-    margin-left: 1rem;
-}
 .auth-login-form{
-    margin-left: 0.4rem;
+    margin-right: 2rem;
+    width: 100%;
+    
+}
+
+.inputs-login-container{
+    padding-left: -4rem;
+}
+
+.forgotten-password{
+    padding-left: 3.5rem;
+}
+
+.create-account{
+    padding-left: 7rem;
 }
 
 }
 
-@media(max-width:480px){
+@media(max-width:600px){
    
     .nav-icon-icon{
        margin-left: -0.5rem; 
@@ -157,7 +143,7 @@
 }
 
 .inputs-login-container{
-    margin-left: 4rem;
+    margin-left: 4.5rem;
 }
 .account-heading{
     margin-top: 2rem;
@@ -169,6 +155,10 @@
 .login-heading{
     margin-left:8rem;
 }
+.auth-login-form{
+    margin-left: 1rem;
+}
+
 }
 
 @media only screen and (min-width:1024px) {
