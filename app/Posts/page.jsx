@@ -142,15 +142,16 @@ console.log(likeCounter)
       {posts.map((post, Index) => (
         <div
           key={Index}
-          className="post-div post mt-6 bg-[#f8f9fa] w-[100%] h-auto shadow-sm p-3"
+          className="post-div post mt-[2rem] bg-[#f8f9fa] h-auto p-3"
         >
           <div className="w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
           <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
             TD
           </div>
 
-          <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
+          <div className="delete-icon ml-[20rem] mt-[-2rem]">
             <svg
+            className="w-[28px] h-[28px] "
               onClick={() => handleDelete(post.key)}
               maxLength="10"
               data-slot="icon"
@@ -173,8 +174,8 @@ console.log(likeCounter)
             <p> {post.post}</p>
           </div>
 
-          <div className="flex ml-[10rem] mt-12 text-[#3f37c9]">
-            <p className="time text-[1.1rem]">{post.time} </p>
+          <div className="flex ml-[8rem] mt-12 text-[#3f37c9]">
+            <p className="time text-[14px] px-6">{post.time} </p>
           </div>
       
           <div className=" post-icons w-[100%] flex h-[25px] flex-row mt-[2rem]  gap-x-[6rem] pl-[3rem]">
@@ -241,7 +242,7 @@ console.log(likeCounter)
           TD
         </div>
 
-        <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
+        <div className="delete-icon w-[28px] h-[28px] mx-[18rem] mt-[-2rem]">
           <svg
             data-slot="icon"
             fill="none"
