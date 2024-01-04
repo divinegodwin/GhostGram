@@ -56,12 +56,12 @@ const Login = () => {
   }
 
   return (
-    <div className="grid place-items-center px-4 py-20 min-h-[100vh]">
+    <div className="grid place-items-center px-4 py-4 min-h-[100vh]">
       <form
         onSubmit={handleLogin}
         className="rounded-lg placeholder:w-[80%] w-full max-w-[500px] py-10 flex flex-col gap-6 shadow-lg px-4 sm:px-8"
       >
-        <header className="grid place-items-center py-5">
+        <header className="grid place-items-center py-4">
           <h1 className="font-bold text-2xl">Sign In</h1>
         </header>
         {error && (
