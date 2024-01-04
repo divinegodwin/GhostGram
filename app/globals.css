@@ -178,7 +178,7 @@
 
     .post-div {
         width: 80%;
-        height: 16rem;
+        height: auto;
         margin-left: 10rem;
         border-radius: 15px;
         margin-top: 6rem;
@@ -301,6 +301,12 @@
     }
     .forgotten-password{
         margin-left:1.6rem;
+    }
+
+    .post-icons{
+        padding-left: 12rem;
+        gap: 22rem;
+        margin-top: 4rem;
     }
 }
 
