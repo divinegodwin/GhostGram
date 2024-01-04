@@ -33,10 +33,14 @@ try{
       setError('invalid username or password')
       return
   }
+
      if(error){
       setError('error occured at login page', error)
       return
-     }else{
+     }else if(data.username === 'Divine' || 'divine'){
+      alert('welcome boss')
+      router.push('/Posts')
+     }else if(data.username === 'Divine' || 'divine'){
       setError('')
       setIsLoggedIn(true)//setting loged in state value to true once user account is found
         router.push('/Posts')// Navigate to home page if there is no error and user is found

@@ -4,20 +4,21 @@ import supabase from "../supabaseClient";
 import { Navbar } from "../Navbar/Navbar";
 
 const Post = () => {
+
   //comfiguring time
   const [time, setTime] = useState("");
-
+  const date = new Date();
   function getTime() {
-    const date = new Date();
     let hours = date.getHours();
     let minutes = date.getMinutes();
+    let fullDate = date.toJSON().slice(0,10)
 
     //setting time format
     const format = ["am", "pm"];
     let newTime; //creating a container to hold the Time and format
     if (hours >= 12) {
       //storing time and format im the container
-      newTime = hours + ":" + minutes + format[1];
+      newTime =`${hours}:${minutes} ${format[1]} ${fullDate}`
     } else {
       newTime = hours + ":" + minutes + format[0];
     }
@@ -93,6 +94,26 @@ const Post = () => {
     newPosts.splice(index, 1);
     setPosts(newPosts);
   }*/
+ 
+/*const[likeIsClicked, setLikeIsClicked] = useState(true)
+const[likeCounter, setLikeCounter] = useState(1)
+
+
+
+const clickedLike =(e)=>{
+
+  if(e !== like){
+    setLikeCounter(likeCounter)
+    console.log('check')
+  }
+  else{
+    setLikeIsClicked(!likeIsClicked)
+setLikeCounter(likeCounter+1)
+console.log(likeCounter)
+  }
+
+}*/
+
 
   return (
     <div>
@@ -127,9 +148,6 @@ const Post = () => {
           <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
             TD
           </div>
-          <div>
-            <p>{post.username}</p>
-          </div>
 
           <div className="delete-icon w-[28px] h-[28px] ml-[20rem] mt-[-2rem]">
             <svg
@@ -155,10 +173,10 @@ const Post = () => {
             <p> {post.post}</p>
           </div>
 
-          <div className="flex ml-[16rem] mt-12 text-[#3f37c9]">
+          <div className="flex ml-[10rem] mt-12 text-[#3f37c9]">
             <p className="time text-[1.1rem]">{post.time} </p>
           </div>
-
+      
           <div className=" post-icons w-[100%] flex h-[25px] flex-row mt-[2rem]  gap-x-[6rem] pl-[3rem]">
             <div className= 'w-[25px]'>
               <svg
@@ -216,7 +234,7 @@ const Post = () => {
         </div>
       ))}
 
-      <div className="welcome-post mt-[2rem] bg-[#f8f9fa] h-[14rem] p-3">
+      <div className="welcome-post mt-[2rem] bg-[#f8f9fa] h-auto p-3">
         <div className=" w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
 
         <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
@@ -241,9 +259,11 @@ const Post = () => {
           </svg>
         </div>
 
-        <div className="mt-[4rem] ml-12">
-          <p className="example-text text-[18px]">
-            Hello and welcome to Thredle
+        <div className="mt-[4rem] ml-12 ">
+          <p className="example-text text-[18px] pb-8">
+            Hello and welcome to Thredle, users are set anonymously by the system but can choose to be known.
+            <br />
+            <strong>MORE FEATURES COMING SOON!</strong>
           </p>
         </div>
       </div>
