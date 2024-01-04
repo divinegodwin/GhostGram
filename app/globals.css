@@ -104,9 +104,10 @@
     padding-left: 3.5rem;
 }
 
-.create-account{
-    padding-left: 7rem;
+.inputs-account-container{
+    padding-left: 1.1rem;
 }
+
 
 }
 
@@ -140,23 +141,6 @@
     width: 120px;
     height: 50px;
     margin-left: 13rem;
-}
-
-.inputs-login-container{
-    margin-left: 4.5rem;
-}
-.account-heading{
-    margin-top: 2rem;
-    margin-left: 4.5rem;
-}
-.create-account{
-    margin-left: -0.1rem;
-}
-.login-heading{
-    margin-left:8rem;
-}
-.auth-login-form{
-    margin-left: 1rem;
 }
 
 }

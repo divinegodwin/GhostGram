@@ -58,12 +58,12 @@ const Account = () => {
   };
 
   return (
-    <div>
+    <div className= "grid place-items-center px-4 py-4 min-h-[100vh]">
       <form
         onSubmit={handleCreateAccount}
-        className=" auth-form w-[80%] h-[440px] flex flex-col gap-6 ml-[2rem] mt-[6rem] shadow-lg"
+        className=" auth-form w-full max-w-[500px] py-10 h-[400px] gap-6 shadow-lg sm:px-8 "
       >
-        <div className="account-heading pt-[1rem] font-bold text-lg">
+        <div className="account-heading  pl-[5.5rem]  font-bold text-lg">
           Create an Account
         </div>
         {/* rendering error state if there is any*/}
@@ -72,10 +72,10 @@ const Account = () => {
             <p className="text-[red] pl-9">{error}</p>
           </div>
         )}
-        <div className="inputs-container flex flex-col gap-6 ml-[3rem]">
+        <div className=" inputs-account-container flex flex-col gap-6 pt-8 px-3">
           <input
             onChange={(e) => setUsername(e.target.value)}
-            className="w-[220px] h-[40px] border-2 p-6 rounded-lg outline-[#3f37c9]"
+            className="w-full h-[60px] p-2 border-2 rounded-lg outline-[#3f37c9]"
             type="text"
             placeholder="username"
             value={username}
@@ -83,7 +83,7 @@ const Account = () => {
 
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="w-[220px] h-[40px] border-2 p-6 rounded-lg outline-[#3f37c9]"
+            className="w-full h-[60px]  border-2 p-4 rounded-lg outline-[#3f37c9]"
             type="password"
             placeholder="password > 6 chars"
             value={password}
@@ -99,7 +99,7 @@ const Account = () => {
        </input>
     */}
 
-          <div className="flex flex-row gap-8">
+          <div className="flex flex-row gap-8 px-8">
             <div>
               <label className="ml-[2rem]">male</label>
               <input
@@ -127,7 +127,7 @@ const Account = () => {
 
           <button
             type="submit"
-            className="w-[220px] p-2 h-[50px] border-2 text-white rounded-lg bg-[#3f37c9]"
+            className=" w-full p-2 h-[60px] ml-0.5 border-2 text-white rounded-lg bg-[#3f37c9]"
           >
             CREATE ACCOUNT
           </button>
