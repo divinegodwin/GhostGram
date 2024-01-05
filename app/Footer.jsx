@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <div className="footer flex flex-row gap-12 pl-16 pt-2 py-1 w-full h-[40px] bg-[#3f37c9] text-white">
+      <div className="footer flex flex-row gap-12 pl-16 pt-3 py-1 w-full h-[50px] bg-[#3f37c9] text-white">
         <div>
           <Link href="https://www.facebook.com/divine.godwin.54922?mibextid=LQQJ4d">
             <svg
