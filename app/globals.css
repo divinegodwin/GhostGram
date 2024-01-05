@@ -66,28 +66,12 @@
     margin-right: 3rem;
 }
 
-.about-container {
-    width: 80%;
-    margin-left: 2rem;
-    margin-top: 4rem;
-}
+
 .about-description {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
     font-size: 16px;
-}
-.explore-btn {
-    width: 120px;
-    height: 50px;
-    margin-left: 5rem;
-    margin-top: 1.5rem;
-}
-
-.send-btn{
-    margin-left: 3.8rem;
-    width:250px;
-    height: 50px;
 }
 
 .auth-login-form{
@@ -291,108 +275,5 @@
         padding-left: 12rem;
         gap: 22rem;
         margin-top: 4rem;
-    }
-}
-
-@media (min-width:760px) and (max-width: 900px){
-
-    .text-area {
-        width: 35rem;
-        height: 120px;
-        margin-left: 4rem;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .post-btn {
-        width: 200px;
-        height: 60px;
-        margin-left: 31rem;
-    }
-    .post-div {
-        width: 80%;
-        height: 16rem;
-        margin-left: 6rem;
-        border-radius: 15px;
-        margin-top: 6rem;
-    }
-    .welcome-post {
-        width: 80%;
-        height: 16rem;
-        margin-left: 6rem;
-        border-radius: 15px;
-        margin-top: 6rem;
-    }
-    .delete-icon {
-        margin-left: 34rem;
-    }
-    .example-text {
-        margin-left: 10rem;
-    }
-    .post-description {
-        margin-left: 10rem;
-        margin-right: 10rem;
-    }
-    .time {
-        margin-left: 17rem;
-        margin-top: 2rem;
-    }
-    .nav-icon {
-        display: none;
-    }
-    .navs {
-        display: flex;
-        flex-direction: row;
-        margin-top: 0.2rem;
-        width:100%;
-    }
-    .nav-items {
-        padding-left: 3rem;
-        margin-top: -3rem;
-    }
-    .desktop-nav-container {
-        margin-left: 26rem;
-        color: white;
-        
-    }
-    .header {
-        font-size: 20px;
-        font-weight: 700;
-    }
-    .form {
-        width: 70%;
-        margin-top: 6rem;
-        margin-left: 10rem;
-        height: 40rem;
-    }
-    .form-item-container {
-        margin-left: 5rem;
-        margin-top: 6rem;
-    }
-    .about-container {
-        width: 80%;
-        margin-left: 5rem;
-        margin-top: 4rem;
-        height: 40rem;
-    }
-    .about-description {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        padding-top: 5rem;
-        font-size: x-large;
-    }
-    .explore-btn {
-        width: 200px;
-        height: 70px;
-        margin-left: 14rem;
-        margin-top: 4rem;
-    }
-    .input{
-        width: 300px;
-    }   
-    
-    .send-btn{
-        margin-left: 3.8rem;
-        width: 300px;
-        height: 60px;
     }
 }
