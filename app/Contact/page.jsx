@@ -27,15 +27,15 @@ const Contact = () => {
         <h1 className="font-bold">Contact Me </h1>
       </div>
 
-      <form className=" grid place-items-center px-4  mt-10 shadow-lg max-w-[90%] h-[450px] ml-4 pl-8 ">
+      <form className="contact-container grid place-items-center px-4  mt-10 shadow-lg max-w-[90%] h-[450px] ml-4 pl-8 ">
         <div className="">
           <div className="flex flex-col mb-6">
             <label for="name" className="pl-1">
               Name
             </label>
-            <input
+            <input 
               type="email"
-              className="  w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
+              className="contact-input  w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
               onChange={handleName}
               placeholder="input your name"
             ></input>
@@ -47,7 +47,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
-              className=" w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
+              className="contact-input w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
               onChange={handleEmail}
               placeholder="input your email"
             ></input>
@@ -66,7 +66,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="ml-1">
-            <button className=" w-[260px] h-[55px]  bg-[#3f37c9] text-white rounded-lg ">
+            <button className="send-btn w-[260px] h-[55px] bg-[#3f37c9] text-white rounded-lg ">
               Send
             </button>
           </div>

@@ -217,6 +217,7 @@
         width: 80%;
         margin-left: 8rem;
         margin-top: 4rem;
+        height: 400px;
     }
 
     .about-description {
@@ -227,9 +228,9 @@
     }
 
     .explore-btn {
-        width: 200px;
-        height: 50px;
-        margin-left: 24rem;
+        width: 300px;
+        height: 70px;
+        margin-left: 26rem;
         margin-top: 4rem;
     }
 
@@ -275,5 +276,25 @@
         padding-left: 12rem;
         gap: 22rem;
         margin-top: 4rem;
+    }
+
+    .contact-container{
+        margin-left: 20rem;
+        justify-content: center;
+        height: 500px;
+        width: 50%;
+    }
+    .contact-input{
+        width: 400px;
+    }
+    .send-btn{
+        width: 400px;
+        height: 55px;
+    }
+
+    .footer{
+    padding-left: 37rem;
+    height: 80px;
+    padding-top: 1.5rem;
     }
 }

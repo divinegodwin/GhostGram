@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
 
-<div className='flex flex-row gap-12 pl-16 pt-2 py-1 w-full h-[40px] bg-[#3f37c9] text-white'>
+<div className='footer flex flex-row gap-12 pl-16 pt-2 py-1 w-full h-[40px] bg-[#3f37c9] text-white'>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

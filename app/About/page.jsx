@@ -12,7 +12,7 @@ const About = () =>{
             
             </div>
 
-            <div className="mt-10 py-2  ml-5 w-[90%] h-[400px] rounded-lg shadow-lg">
+            <div className=" about-container mt-10 py-2  ml-5 w-[90%] h-[400px] rounded-lg shadow-lg">
                <div>
                 <p className=" about-description tracking-wide flex justify-center pt-4">
                 Welcome to Thredle,
@@ -24,9 +24,9 @@ const About = () =>{
                 </p>
             </div>
 
-         <Link href="/">
+         <Link href="/Posts">
             <div className="ml-[3rem] flex">
-            <button className=" p-3  mt-8 rounded-lg w-[250px] h-[50px] bg-[#3f37c9] text-white ">Explore</button>
+            <button className="explore-btn p-3  mt-8 rounded-lg w-[250px] h-[50px] bg-[#3f37c9] text-white ">Explore</button>
             </div>
 </Link>
 
