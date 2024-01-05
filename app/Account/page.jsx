@@ -61,7 +61,7 @@ const Account = () => {
     <div className= "grid place-items-center px-4 py-4 min-h-[100vh]">
       <form
         onSubmit={handleCreateAccount}
-        className=" auth-form w-full max-w-[500px] py-10 h-[400px] gap-6 shadow-lg sm:px-8 "
+        className=" auth-form w-full max-w-[500px] py-10 h-[420px] gap-6 shadow-lg sm:px-8 "
       >
         <div className="account-heading  pl-[5.5rem]  font-bold text-lg">
           Create an Account
@@ -69,10 +69,10 @@ const Account = () => {
         {/* rendering error state if there is any*/}
         {error && (
           <div>
-            <p className="text-[red] pl-9">{error}</p>
+            <p className="text-[red] pt-4 pl-9">{error}</p>
           </div>
         )}
-        <div className=" inputs-account-container flex flex-col gap-6 pt-8 px-3">
+        <div className=" inputs-account-container flex flex-col gap-6 pt-4 px-3">
           <input
             onChange={(e) => setUsername(e.target.value)}
             className="w-full h-[60px] p-2 border-2 rounded-lg outline-[#3f37c9]"
@@ -99,7 +99,7 @@ const Account = () => {
        </input>
     */}
 
-          <div className="flex flex-row gap-8 px-8">
+          <div className="radios flex flex-row gap-8 px-8">
             <div>
               <label className="ml-[2rem]">male</label>
               <input

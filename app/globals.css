@@ -243,8 +243,8 @@
     }
     .auth-form{
         width: 30%;
-        margin-top: 8rem;
-        margin-left: 30rem;
+        
+       
     }
 
     .auth-login-form{
@@ -252,18 +252,20 @@
         margin-top: 8rem;
         margin-left: 25rem;
     }
+    .account-heading{
+        margin-left: 1rem;
+    }
+    .create-account{
+        margin-left: 3.5rem;
+    }
+    .radios{
+        padding-left: 3.5rem;
+    }
     .inputs-container{
         margin-left: 7rem;
     }
     .inputs-login-container{
         margin-left: 7rem;
-    }
-    .account-heading{
-        margin-top: 2rem;
-        margin-left: 8rem;
-    }
-    .create-account{
-        margin-left: 3.5rem;
     }
     .login-heading{
         margin-left:11rem;
