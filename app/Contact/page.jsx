@@ -62,7 +62,7 @@ const Contact = () => {
               cols={20}
               rows={6}
               placeholder="Enter max 20 characters"
-              className="input w-[260px] h-[90px] mt-2 border-4 rounded-lg p-4"
+              className="contact-input w-[260px] h-[90px] mt-2 border-4 rounded-lg p-4"
             ></textarea>
           </div>
           <div className="ml-1">
