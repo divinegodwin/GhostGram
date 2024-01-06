@@ -15,14 +15,14 @@ export const Navbar = () => {
   return (
 
     <div>
-        <div className="p-5 shadow-xl text-white flex flex-row gap-60 bg-[#3f37c9] h-[4rem] w-[100%]">
+        <div className="p-5 shadow-xl text-white flex flex-row gap-40 bg-[#3f37c9] h-[4rem] w-[100%]">
       <div className="ml-2">
         <h1 className="header">GhostGram</h1>
       </div>
 
-      <div className="nav-icon h-[30px] w-[30px]" onClick={toggleNav}>
+      <div className="nav-icon pl-12" onClick={toggleNav}>
         <svg
-        className="nav-icon-icon"
+        className="nav-icon-icon w-[30px] "
           data-slot="icon"
           fill="none"
           strokeWidth="1.5"

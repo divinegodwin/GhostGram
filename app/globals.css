@@ -88,11 +88,6 @@
     margin-left: 13rem;
 }
 
-.nav-icon-icon{
-    display: block;
-    width: 30px;
-    margin-left: -2rem;
-}
 
 
 .delete-icon {
@@ -130,9 +125,6 @@
 
 @media(max-width:600px){
    
-    .nav-icon-icon{
-       margin-left: -0.5rem; 
-    }
    .example-text {
     margin-left: -1rem;
 }
