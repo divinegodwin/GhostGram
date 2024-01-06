@@ -241,7 +241,7 @@ console.log(likeCounter)
         <div className=" w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
 
         <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
-          TD
+          GH
         </div>
 
         <div className="delete-icon w-[28px] h-[28px] mx-[18rem] mt-[-2rem]">

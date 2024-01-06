@@ -188,7 +188,7 @@
     }
 
     .nav-items {
-        padding-left: 12rem;
+        padding-left: 16rem;
         margin-top: -3rem;
     }
 
@@ -217,7 +217,7 @@
         width: 80%;
         margin-left: 8rem;
         margin-top: 4rem;
-        height: 400px;
+        height: 430px;
     }
 
     .about-description {
@@ -243,7 +243,6 @@
     }
     .auth-form{
         width: 30%;
-        
        
     }
 
