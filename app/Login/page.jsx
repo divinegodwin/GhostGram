@@ -7,61 +7,57 @@ import Link from "next/link";
 import Loader from "../Loader";
 
 const Login = () => {
+  const router = useRouter();
 
-  const router = useRouter()
-
-  
-  const [processing, setProcessing] = useState(false)
+  const [processing, setProcessing] = useState(false);
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState('')
-  const [isLoggedIn, setIsLoggedIn] = useState('')//state for checking user logged in status
+  const [error, setError] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(""); //state for checking user logged in status
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     if (!username || !password) {
-      setError('Fill in all inputs')
-      return
-    }
-    if (password.length <= 6) {
-      setError('password should be more than 6 characters')
+      setError("Fill in all inputs");
       return;
     }
-      setProcessing(true)
-    
-    try {
-      const { data, error } = await supabase.from('Account')
-        .select('username, password')
-        .eq('username', username)
-      if ((data[0].password !== password) && (data.username !== username)) {
-        setError('invalid username or password')
-        return
-      }
-
-      if (error) {
-        setError('error occured at login page', error)
-        return
-      } else if (data.username === 'Divine' || 'divine') {
-        setError('')
-        setIsLoggedIn(true) //setting loged in state value to true once user account is found
-        setProcessing(true)
-
-        router.push('/Posts') // Navigate to posts page if there is no error and user is found
-        
-      } 
-    
-    } catch (error) {
-      console.log('try error occured at login page', error)
-      setError('user not found')
-    }finally{
-      setProcessing(false)//regardless if there is error or not
+    if (password.length <= 6) {
+      setError("password should be more than 6 characters");
+      return;
     }
-  }
+    setProcessing(true);
+
+    try {
+      const { data, error } = await supabase
+        .from("Account")
+        .select("username, password")
+        .eq("username", username);
+      if (data[0].password !== password && data.username !== username) {
+        setError("invalid username or password");
+        return;
+      }
+      if (error) {
+        setError("error occured at login page", error);
+        return;
+      } else if (data.username === "Divine" || "divine") {
+        setError("");
+        setIsLoggedIn(true); //setting loged in state value to true once user account is found
+        setProcessing(true);
+
+        router.push("/Posts"); // Navigate to posts page if there is no error and user is found
+      }
+    } catch (error) {
+      console.log("try error occured at login page", error);
+      setError("user not found");
+    } finally {
+      setProcessing(false); //regardless if there is error or not
+    }
+  };
   if (isLoggedIn) {
     // User is logged in, don't render the Login component
-    return null;//This means the Login component won't be rendered
+    return null; //This means the Login component won't be rendered
   }
 
   return (
@@ -74,7 +70,9 @@ const Login = () => {
           <h1 className="font-bold text-2xl">Sign In</h1>
         </header>
         {error && (
-          <div><p className='text-[red] pl-9'>{error}</p></div>
+          <div>
+            <p className="text-[red] pl-9">{error}</p>
+          </div>
         )}
 
         <div className="flex flex-col gap-6">
@@ -85,7 +83,7 @@ const Login = () => {
             placeholder="username"
             value={username}
           ></input>
-                  {processing && <Loader />}
+          {processing && <Loader />}
           <fieldset>
             <input
               onChange={(e) => setPassword(e.target.value)}
@@ -100,14 +98,19 @@ const Login = () => {
             </div>
           </fieldset>
 
-          <button type="submit" className="w-full p-2 h-[50px] text-white border-2 rounded-lg bg-[#3f37c9]">
+          <button
+            type="submit"
+            className="w-full p-2 h-[50px] text-white border-2 rounded-lg bg-[#3f37c9]"
+          >
             Submit
           </button>
         </div>
 
         <div className="grid place-items-center">
-          <Link href='/Account'>
-            <button className="focus:text-[red] text-[grey] text-lg">Create an Account</button>
+          <Link href="/Account">
+            <button className="focus:text-[red] text-[grey] text-lg">
+              Create an Account
+            </button>
           </Link>
         </div>
       </form>
