@@ -147,7 +147,7 @@ console.log(likeCounter)
           className="post-div post mt-[2rem] bg-[#f8f9fa] h-auto p-3"
         >
           <div className="w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
-          <div className="font-bold mt-[-2.9rem] ml-8 text-white text-[22px]">
+          <div className="font-bold mt-[-2.9rem] ml-7 text-white text-[22px]">
             GH
           </div>
 

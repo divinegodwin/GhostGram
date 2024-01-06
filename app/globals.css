@@ -17,8 +17,10 @@
     height: 48px;
     position: relative;
     animation: split 1s ease-in infinite alternate;
-  }
-  .loader::before , .loader::after {
+}
+
+.loader::before,
+.loader::after {
     content: '';
     position: absolute;
     height: 48px;
@@ -30,20 +32,27 @@
     background: #3f37c9;
     opacity: 0.75;
     backdrop-filter: blur(20px);
-  }
-  
-  .loader::after {
+}
+
+.loader::after {
     left: auto;
     right: 0;
     background: #FFF;
     transform: translateX(10px);
-  }
-  
-  @keyframes split {
-   0% , 25%{ width: 64px }
-   100%{ width: 148px }
-  }
-    
+}
+
+@keyframes split {
+
+    0%,
+    25% {
+        width: 64px
+    }
+
+    100% {
+        width: 148px
+    }
+}
+
 
 @keyframes myfades {
 
@@ -72,85 +81,89 @@
         margin-top: 2rem;
     }
 }
-   
-   
-@media(max-width:420px){
+
+
+@media(max-width:420px) {
     .text-area {
-    width: 16rem;
-    height: 120px;
-    margin-left: -1rem;
-    border-radius: 10px;
-    padding: 10px;
-}
-.post-btn {
-    width: 100px;
-    height: 50px;
-    margin-left: 13rem;
-}
+        width: 16rem;
+        height: 120px;
+        margin-left: -1rem;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .post-btn {
+        width: 100px;
+        height: 50px;
+        margin-left: 13rem;
+    }
 
 
 
-.delete-icon {
-    margin-right: 3rem;
-}
+    .delete-icon {
+        margin-right: 3rem;
+    }
 
 
-.about-description {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 2rem;
-    font-size: 16px;
+    .about-description {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        font-size: 16px;
+    }
+
+    .auth-login-form {
+        margin-right: 2rem;
+        width: 100%;
+
+    }
+
+    .inputs-login-container {
+        padding-left: -4rem;
+    }
+
+    .forgotten-password {
+        padding-left: 3.5rem;
+    }
+
+    .inputs-account-container {
+        padding-left: 1.1rem;
+    }
+
 }
 
-.auth-login-form{
-    margin-right: 2rem;
-    width: 100%;
-    
-}
+@media(max-width:600px) {
 
-.inputs-login-container{
-    padding-left: -4rem;
-}
+    .example-text {
+        margin-left: -1rem;
+    }
 
-.forgotten-password{
-    padding-left: 3.5rem;
-}
+    .post-description {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 
-.inputs-account-container{
-    padding-left: 1.1rem;
-}
+    .time {
+        margin-left: 1rem;
+    }
 
+    .welcome-post {
 
-}
+        margin-bottom: 6rem;
+    }
 
-@media(max-width:600px){
-   
-   .example-text {
-    margin-left: -1rem;
-}
-.post-description {
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-   .time{
-    margin-left: 1rem;
-   }
-   .welcome-post {
+    .text-area {
 
-    margin-bottom: 6rem;
-}
+        margin-left: -0.1rem;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
-.text-area {
-    
-    margin-left: -0.1rem;
-    border-radius: 10px;
-    padding: 10px;
-}
-.post-btn {
-    width: 120px;
-    height: 50px;
-    margin-left: 13rem;
-}
+    .post-btn {
+        width: 120px;
+        height: 50px;
+        margin-left: 13rem;
+    }
 
 }
 
@@ -209,7 +222,7 @@
         display: flex;
         flex-direction: row;
         margin-top: 0.2rem;
-        width:100%;
+        width: 100%;
     }
 
     .nav-items {
@@ -220,7 +233,7 @@
     .desktop-nav-container {
         margin-left: 26rem;
         color: white;
-        
+
     }
 
     .header {
@@ -259,68 +272,78 @@
         margin-top: 4rem;
     }
 
-    .input{
+    .input {
         width: 400px;
     }
 
     .delete-icon {
         margin-left: rem;
     }
-    .auth-form{
+
+    .auth-form {
         width: 30%;
-       
+
     }
 
-    .auth-login-form{
+    .auth-login-form {
         width: 30%;
         margin-top: 8rem;
         margin-left: 25rem;
     }
-    .account-heading{
+
+    .account-heading {
         margin-left: 1rem;
     }
-    .create-account{
+
+    .create-account {
         margin-left: 3.5rem;
     }
-    .radios{
+
+    .radios {
         padding-left: 3.5rem;
     }
-    .inputs-container{
+
+    .inputs-container {
         margin-left: 7rem;
-    }
-    .inputs-login-container{
-        margin-left: 7rem;
-    }
-    .login-heading{
-        margin-left:11rem;
-    }
-    .forgotten-password{
-        margin-left:1.6rem;
     }
 
-    .post-icons{
+    .inputs-login-container {
+        margin-left: 7rem;
+    }
+
+    .login-heading {
+        margin-left: 11rem;
+    }
+
+    .forgotten-password {
+        margin-left: 1.6rem;
+    }
+
+    .post-icons {
         padding-left: 12rem;
         gap: 22rem;
         margin-top: 4rem;
     }
 
-    .contact-container{
+    .contact-container {
         margin-left: 20rem;
         justify-content: center;
         height: 500px;
         width: 50%;
     }
-    .contact-input{
+
+    .contact-input {
         width: 400px;
     }
-    .send-btn{
+
+    .send-btn {
         width: 400px;
         height: 55px;
     }
 
-    .footer{
-    padding-left: 37rem;
-    height: 80px;
-    padding-top: 1.5rem;
+    .footer {
+        padding-left: 37rem;
+        height: 80px;
+        padding-top: 1.5rem;
     }
 }
