@@ -8,11 +8,11 @@ const Post = () => {
   //comfiguring time
   const [time, setTime] = useState("");
   const date = new Date();
+
   function getTime() {
     let hours = date.getHours();
     let minutes = date.getMinutes();
-    let fullDate = date.toJSON().slice(0,10)
-
+    let fullDate = date.toLocaleDateString()
     //setting time format
     const format = ["am", "pm"];
     let newTime; //creating a container to hold the Time and format
@@ -20,7 +20,7 @@ const Post = () => {
       //storing time and format im the container
       newTime =`${hours}:${minutes} ${format[1]} ${fullDate}`
     } else {
-      newTime = hours + ":" + minutes + format[0];
+      newTime = ` ${hours}:${minutes} ${format[0] }  ${fullDate}`;
     }
     setTime(newTime); // setting the time const varaible
     return newTime; //returning the time string
