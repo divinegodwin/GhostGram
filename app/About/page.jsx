@@ -12,7 +12,7 @@ const About = () =>{
             
             </div>
 
-            <div className=" about-container mt-10 py-2  ml-5 w-[90%] h-[430px] rounded-lg shadow-lg">
+            <div className=" about-container py-2  ml-5 w-[90%] h-[480px] rounded-lg shadow-lg">
                <div>
                 <p className=" about-description tracking-wide flex justify-center pt-4">
                 "Introducing GhostGram – Embrace the freedom of expression without the weight of identity. 
