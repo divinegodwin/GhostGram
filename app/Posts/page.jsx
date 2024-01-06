@@ -38,6 +38,8 @@ const Post = () => {
     setUserInput(event.target.value);
   };
   //when the button is clicked if stores the user input into an array of post
+
+
   const postButton = () => {
     if (userInput != "") {
       setPosts((prevPost) => [userInput, ...prevPost]);
