@@ -3,9 +3,12 @@ import React from "react";
 import supabase from "../supabaseClient";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Loader from "../Loader";
 
 const Account = () => {
   const router = useRouter(); //for routing
+
+  const [processing, setProcessing] = useState(false)//checking if the data is being processed to the database
   //form input state
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -28,6 +31,7 @@ const Account = () => {
       setError("password should be more than 6 characters");
       return;
     }
+    setProcessing(true)
     const { data } = await supabase
       .from("Account") //check if user exist
       .select("username")
@@ -47,13 +51,17 @@ const Account = () => {
         },
       ]);
       console.log(data);
+    
       router.push("/Posts");
+      
 
       if (error) {
         console.log("error occured sending account to database", error);
       }
     } catch (error) {
       console.log("an error occured", error);
+    }finally{
+      setProcessing(false)//regardless if there is error or not
     }
   };
 
@@ -61,7 +69,7 @@ const Account = () => {
     <div className= "grid place-items-center px-4 py-4 min-h-[100vh]">
       <form
         onSubmit={handleCreateAccount}
-        className=" auth-form w-full max-w-[500px] py-10 h-[420px] gap-6 shadow-lg sm:px-8 "
+        className=" auth-form w-full max-w-[500px] py-10 h-[450px] gap-6 shadow-lg sm:px-8 "
       >
         <div className="account-heading  pl-[5.5rem]  font-bold text-lg">
           Create an Account
@@ -69,7 +77,7 @@ const Account = () => {
         {/* rendering error state if there is any*/}
         {error && (
           <div>
-            <p className="text-[red] pt-4 pl-9">{error}</p>
+            <p className="text-[red] pt-4 pl-9 ">{error}</p>
           </div>
         )}
         <div className=" inputs-account-container flex flex-col gap-6 pt-4 px-3">
@@ -80,7 +88,7 @@ const Account = () => {
             placeholder="username"
             value={username}
           ></input>
-
+    {processing && <Loader />}
           <input
             onChange={(e) => setPassword(e.target.value)}
             className="w-full h-[60px]  border-2 p-4 rounded-lg outline-[#3f37c9]"
@@ -88,6 +96,8 @@ const Account = () => {
             placeholder="password > 6 chars"
             value={password}
           ></input>
+
+
 
           {/*
     <input
@@ -133,6 +143,7 @@ const Account = () => {
           </button>
         </div>
       </form>
+     
     </div>
   );
 };

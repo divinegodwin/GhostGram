@@ -4,10 +4,14 @@ import { useState, useEffect } from "react";
 import supabase from "../supabaseClient";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Loader from "../Loader";
 
 const Login = () => {
 
   const router = useRouter()
+
+  
+  const [processing, setProcessing] = useState(false)
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,6 +29,8 @@ const Login = () => {
       setError('password should be more than 6 characters')
       return;
     }
+      setProcessing(true)
+    
     try {
       const { data, error } = await supabase.from('Account')
         .select('username, password')
@@ -38,16 +44,19 @@ const Login = () => {
         setError('error occured at login page', error)
         return
       } else if (data.username === 'Divine' || 'divine') {
-        alert('welcome boss')
-        router.push('/Posts')
-      } else if (data.username === 'Divine' || 'divine') {
         setError('')
-        setIsLoggedIn(true)//setting loged in state value to true once user account is found
-        router.push('/Posts')// Navigate to home page if there is no error and user is found
-      }
+        setIsLoggedIn(true) //setting loged in state value to true once user account is found
+        setProcessing(true)
+
+        router.push('/Posts') // Navigate to posts page if there is no error and user is found
+        
+      } 
+    
     } catch (error) {
       console.log('try error occured at login page', error)
       setError('user not found')
+    }finally{
+      setProcessing(false)//regardless if there is error or not
     }
   }
   if (isLoggedIn) {
@@ -76,7 +85,7 @@ const Login = () => {
             placeholder="username"
             value={username}
           ></input>
-
+                  {processing && <Loader />}
           <fieldset>
             <input
               onChange={(e) => setPassword(e.target.value)}
