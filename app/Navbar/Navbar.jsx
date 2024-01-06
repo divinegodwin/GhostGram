@@ -17,7 +17,7 @@ export const Navbar = () => {
     <div>
         <div className="p-5 shadow-xl text-white flex flex-row gap-60 bg-[#3f37c9] h-[4rem] w-[100%]">
       <div className="ml-2">
-        <h1 className="header">Thredle</h1>
+        <h1 className="header">GhostGram</h1>
       </div>
 
       <div className="nav-icon h-[30px] w-[30px]" onClick={toggleNav}>

@@ -264,7 +264,7 @@ console.log(likeCounter)
 
         <div className="mt-[4rem] ml-12 ">
           <p className="example-text text-[18px] pb-8">
-            Hello and welcome to Thredle, users are set anonymously by the system but can choose to be known.
+            Hello and welcome to GhostGram, users are set anonymously by the system but can choose to be known.
             <br />
             <strong>MORE FEATURES COMING SOON!</strong>
           </p>

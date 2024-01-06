@@ -5,22 +5,22 @@ const About = () =>{
     return(
         
         <div>
-            <Navbar h1 ="About Thredle" />
+            <Navbar h1 ="About" />
 
 <div className="flex justify-center p-6 shadow-lg">
             <h1 className="text-2xl justify-center">About</h1>
             
             </div>
 
-            <div className=" about-container mt-10 py-2  ml-5 w-[90%] h-[400px] rounded-lg shadow-lg">
+            <div className=" about-container mt-10 py-2  ml-5 w-[90%] h-[430px] rounded-lg shadow-lg">
                <div>
                 <p className=" about-description tracking-wide flex justify-center pt-4">
-                Welcome to Thredle,
-                where your thought take center stage! We're your go-to app for 
-                 collecting and showcasing your ideas effortlessly. 
-                 With Thredle, inputting and displaying your moments is
-                  as simple as a Facebook post. Join us in weaving the threads 
-                  of your life's stories!
+                "Introducing GhostGram – Embrace the freedom of expression without the weight of identity. 
+                GhostGram is your sanctuary for anonymous posting, where every word is heard, and every secret
+                 finds a voice. Share your thoughts, tell your stories, and connect with others in a realm where
+                  anonymity reigns supreme. Join GhostGram and let your words echo in the haunting beauty of the 
+                  anonymous realm."
+              
                 </p>
             </div>
 
