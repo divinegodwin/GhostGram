@@ -147,8 +147,8 @@ console.log(likeCounter)
           className="post-div post mt-[2rem] bg-[#f8f9fa] h-auto p-3"
         >
           <div className="w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
-          <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
-            TD
+          <div className="font-bold mt-[-2.9rem] ml-7 text-white text-[22px]">
+            GH
           </div>
 
           <div className="delete-icon ml-[20rem] mt-[-2rem]">
@@ -240,7 +240,7 @@ console.log(likeCounter)
       <div className="welcome-post mt-[2rem] bg-[#f8f9fa] h-auto p-3">
         <div className=" w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
 
-        <div className="font-bold mt-[-2.8rem] ml-8 text-white text-[22px]">
+        <div className="font-bold mt-[-2.9rem] ml-7 text-white text-[22px]">
           GH
         </div>
 
