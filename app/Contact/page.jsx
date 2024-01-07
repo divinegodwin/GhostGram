@@ -34,10 +34,11 @@ const Contact = () => {
               Name
             </label>
             <input 
-              type="email"
+              type="text"
               className="contact-input  w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
               onChange={handleName}
               placeholder="input your name"
+              value={name}
             ></input>
           </div>
 
@@ -46,10 +47,11 @@ const Contact = () => {
               Email
             </label>
             <input
-              type="text"
+              type="email"
               className="contact-input w-[260px] h-[60px] mt-2 border-4 rounded-lg p-4"
               onChange={handleEmail}
               placeholder="input your email"
+              value={email}
             ></input>
           </div>
 
@@ -63,6 +65,7 @@ const Contact = () => {
               rows={6}
               placeholder="Enter max 20 characters"
               className="contact-input w-[260px] h-[90px] mt-2 border-4 rounded-lg p-4"
+              value={message}
             ></textarea>
           </div>
           <div className="ml-1">

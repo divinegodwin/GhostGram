@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import supabase from "../supabaseClient";
 import { Navbar } from "../Navbar/Navbar";
+import CommentBody from "../CommentBody";
 
 const Post = () => {
-
   //comfiguring time
   const [time, setTime] = useState("");
   const date = new Date();
@@ -12,15 +12,15 @@ const Post = () => {
   function getTime() {
     let hours = date.getHours();
     let minutes = date.getMinutes();
-    let fullDate = date.toLocaleDateString()
+    let fullDate = date.toLocaleDateString();
     //setting time format
     const format = ["am", "pm"];
     let newTime; //creating a container to hold the Time and format
     if (hours >= 12) {
       //storing time and format im the container
-      newTime =`${hours}:${minutes} ${format[1]} ${fullDate}`
+      newTime = `${hours}:${minutes} ${format[1]} ${fullDate}`;
     } else {
-      newTime = ` ${hours}:${minutes} ${format[0] }  ${fullDate}`;
+      newTime = ` ${hours}:${minutes} ${format[0]}  ${fullDate}`;
     }
     setTime(newTime); // setting the time const varaible
     return newTime; //returning the time string
@@ -91,30 +91,6 @@ const Post = () => {
   };
   fetchData(); // calling the fetch function
 
-  /*const handleDelete = (index) => {
-    let newPosts = [...posts];
-    newPosts.splice(index, 1);
-    setPosts(newPosts);
-  }*/
- 
-/*const[likeIsClicked, setLikeIsClicked] = useState(true)
-const[likeCounter, setLikeCounter] = useState(1)
-
-
-
-const clickedLike =(e)=>{
-
-  if(e !== like){
-    setLikeCounter(likeCounter)
-    console.log('check')
-  }
-  else{
-    setLikeIsClicked(!likeIsClicked)
-setLikeCounter(likeCounter+1)
-console.log(likeCounter)
-  }
-
-}*/
 
 
   return (
@@ -151,23 +127,21 @@ console.log(likeCounter)
             GH
           </div>
 
-          <div className="delete-icon ml-[20rem] mt-[-2rem]">
+          <div className="menu-icon ml-[20rem] mt-[-2rem]">
             <svg
-            className="w-[28px] h-[28px] "
-              onClick={() => handleDelete(post.key)}
-              maxLength="10"
+              className="w-[28px] h-[28px]"
               data-slot="icon"
               fill="none"
-              strokeWidth="1.5"
+              stroke-width="1.5"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
               ></path>
             </svg>
           </div>
@@ -179,9 +153,9 @@ console.log(likeCounter)
           <div className="flex ml-[9rem] mt-12 text-[#3f37c9]">
             <p className="time text-[14px] px-4">{post.time} </p>
           </div>
-      
+
           <div className=" post-icons w-[100%] flex h-[25px] flex-row mt-[2rem]  gap-x-[6rem] pl-[3rem]">
-            <div className= 'w-[25px]'>
+            <div className="w-[25px]">
               <svg
                 data-slot="icon"
                 fill="none"
@@ -199,7 +173,7 @@ console.log(likeCounter)
               </svg>
             </div>
 
-            <div  className= 'w-[25px]'>
+            <div className="w-[25px]">
               <svg
                 data-slot="icon"
                 fill="none"
@@ -216,7 +190,7 @@ console.log(likeCounter)
                 ></path>
               </svg>
             </div>
-            <div  className= 'w-[25px] '>
+            <div className="w-[25px] ">
               <svg
                 data-slot="icon"
                 fill="none"
@@ -234,6 +208,9 @@ console.log(likeCounter)
               </svg>
             </div>
           </div>
+            {/* comment call */}
+            <CommentBody post={post} />
+          
         </div>
       ))}
 
@@ -264,11 +241,14 @@ console.log(likeCounter)
 
         <div className="mt-[4rem] ml-12 ">
           <p className="example-text text-[18px] pb-8">
-            Hello and welcome to GhostGram, users are set anonymously by the system but can choose to be known.
+            Hello and welcome to GhostGram, users are set anonymously by the
+            system but can choose to be known.
             <br />
             <strong>MORE FEATURES COMING SOON!</strong>
           </p>
         </div>
+      
+
       </div>
     </div>
   );
