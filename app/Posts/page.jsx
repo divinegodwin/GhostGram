@@ -29,7 +29,7 @@ const Post = () => {
   useEffect(() => {
     let timeString = getTime();
     setTime(timeString);
-  });
+  },[]);
 
   const [posts, setPosts] = useState([]);
   const [userInput, setUserInput] = useState("");
@@ -77,10 +77,10 @@ const Post = () => {
     try {
       const { data, error } = await supabase
         .from("Post")
-        .select("post,time")
+        .select("id,post,time")
         .order("created_at", { ascending: false }); //fetching the data from new to old
       if (data) {
-        setPosts(data.map((entry) => ({ post: entry.post, time: entry.time }))); // setting and fetching from the columns by mapping through and assignning each column to its value
+        setPosts(data.map((entry) => ({  id: entry.id, post: entry.post, time: entry.time }))); // setting and fetching from the columns by mapping through and assignning each column to its value
       }
       if (error) {
         console.log("error fetching data", error);
@@ -91,7 +91,11 @@ const Post = () => {
   };
   fetchData(); // calling the fetch function
 
-
+//setting comment visibility state
+const[commentIsVisible, setCommentIsVisible] = useState(false)
+  function commentClicked (){
+      setCommentIsVisible(!commentIsVisible)
+  }
 
   return (
     <div>
@@ -117,9 +121,9 @@ const Post = () => {
         </div>
       </div>
 
-      {posts.map((post, Index) => (
+      {posts.map((post) => (
         <div
-          key={Index}
+          key={post.id}
           className="post-div post mt-[2rem] bg-[#f8f9fa] h-auto p-3"
         >
           <div className="w-[60px] h-[60px] rounded-full bg-[#3f37c9] ml-4"></div>
@@ -175,6 +179,7 @@ const Post = () => {
 
             <div className="w-[25px]">
               <svg
+              onClick={commentClicked}
                 data-slot="icon"
                 fill="none"
                 stroke-width="1.5"
@@ -209,8 +214,12 @@ const Post = () => {
             </div>
           </div>
             {/* comment call */}
-            <CommentBody post={post} />
-          
+
+            {commentIsVisible &&(
+                       <CommentBody post={post} />
+   
+            )}
+
         </div>
       ))}
 
