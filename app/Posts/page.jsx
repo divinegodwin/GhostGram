@@ -91,11 +91,16 @@ const Post = () => {
   };
   fetchData(); // calling the fetch function
 
-//setting comment visibility state
-const[commentIsVisible, setCommentIsVisible] = useState(false)
-  function commentClicked (){
-      setCommentIsVisible(!commentIsVisible)
-  }
+//setting comment visibility state when the comment icon is clicked
+  //state for each comment to be visible to a particular post
+  const [commentVisibility, setCommentVisiblity] = useState({})// takes an object to store the key for each post
+
+  //togling visibility for each post comment
+
+function commentClicked (postId){// post id a key to check the current clicked icon
+    setCommentVisiblity((prevVisibility) =>({...prevVisibility, [postId]: !prevVisibility[postId],}))
+}
+
 
   return (
     <div>
@@ -179,7 +184,7 @@ const[commentIsVisible, setCommentIsVisible] = useState(false)
 
             <div className="w-[25px]">
               <svg
-              onClick={commentClicked}
+              onClick={()=>commentClicked(post.id)}
                 data-slot="icon"
                 fill="none"
                 stroke-width="1.5"
@@ -215,7 +220,7 @@ const[commentIsVisible, setCommentIsVisible] = useState(false)
           </div>
             {/* comment call */}
 
-            {commentIsVisible &&(
+            {commentVisibility[post.id] &&(
                        <CommentBody post={post} />
    
             )}

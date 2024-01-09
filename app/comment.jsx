@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Comment = ({className, handleCommentChange, value, handleCommentButton, post_id}) => {
+const Comment = ({className, handleCommentChange, value, handleCommentButton}) => {
   return (
-    <div className='flex flex-row gap-6'>
+    <div className='flex flex-row gap-1'>
         <input
         type='text'
         className={className}
@@ -13,7 +13,7 @@ const Comment = ({className, handleCommentChange, value, handleCommentButton, po
         
         <button 
         onClick={handleCommentButton}
-        className=' w-[69px] border-2 text-white bg-[#3f37c9] h-[30px]'>send</button>
+        className='bg-[#3f37c9] w-[100px] h-[40px] text-[#ffff] rounded-lg'>send</button>
     
     <div>
 

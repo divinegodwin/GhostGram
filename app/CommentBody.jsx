@@ -10,13 +10,16 @@ const CommentBody = ({post}) => {
     e.preventDefault();
     setComments((prevComment) => [commentInput,  ...prevComment]);
     setCommentInput("");
+    if(!commentInput){
+      alert('not valid')
+        return;
+    }
 
     const{data:insertedComment, error:commentInsertError} = await supabase.from('Comment')
     .insert([{
       comment: commentInput,
       post_id: post.id
     }])
-    console.log('postid ==', post.id)
     if(commentInsertError){
       console.log('an error occured at insetting comment', error)
     }
@@ -43,26 +46,26 @@ const CommentBody = ({post}) => {
   
   };
   fetch()
-}, [post.id])
+}, [])
   
 
   return (
 
 
-    <div>
+    <div className="mt-14 flex flex-col gap-6 h-[200px] overflow-y-auto">
     
     
     <div>  
       {comments.map((comment) => (
-        <div key={comment.id}>
+        <div key={comment.id} className="w-full flex flex-col p-2  bg-white mt-[0.1rem]">
           <p>{comment.comment}</p>
           </div>
       ))}
       </div>  
 
-      <div>
+      <div className=' grid justify-center '>
         <Comment
-          className="w-200px border-2 h-30px"
+          className="w-200px border-2 h-auto rounded-lg "
           handleCommentChange={(e) => setCommentInput(e.target.value)}
           value={commentInput}
           handleCommentButton={handleCommentButton}
