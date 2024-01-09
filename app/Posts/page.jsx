@@ -107,15 +107,8 @@ function commentClicked (postId){// post id a key to check the current clicked i
       <div>
         <Navbar />
       </div>
-      <div className="bg-[#f8f9fa] fixed top-12">
-      <marquee className='marquee px-4 pt-4 text-black'>
-      Hello and welcome to GhostGram, users are set anonymously by the
-            system but can choose to be known.
-          
-            <strong>MORE FEATURES COMING SOON!</strong>
-      </marquee>
-      </div>
-      <div>
+    
+      <div className="pt-[4rem]">
         <div className=" mt-[2rem] ml-16">
           <textarea
             onChange={handleChange}
@@ -271,6 +264,14 @@ function commentClicked (postId){// post id a key to check the current clicked i
         </div>
       
 
+      </div>
+      <div className="bg-[#f8f9fa] fixed h-[80px] bottom-0">
+      <marquee className='marquee px-4 p-8 text-black text-lg'>
+      Hello and welcome to GhostGram, users are set anonymously by the
+            system but can choose to be known.
+          
+            <strong>MORE FEATURES COMING SOON!</strong>
+      </marquee>
       </div>
     </div>
   );
