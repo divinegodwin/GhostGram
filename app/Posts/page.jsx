@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import supabase from "../supabaseClient";
 import { Navbar } from "../Navbar/Navbar";
 import CommentBody from "../CommentBody";
+import Loader from "../Loader";
 
 const Post = () => {
   //comfiguring time
