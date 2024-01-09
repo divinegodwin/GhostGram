@@ -169,7 +169,7 @@ const Post = () => {
           </div>
 
           <div className="flex ml-[9rem] mt-12 text-[#3f37c9]">
-            <p className="time text-[14px] px-4">{post.time} </p>
+            <p className="time text-[14px] px-3">{post.time} </p>
           </div>
 
           <div className=" post-icons w-[100%] flex h-[25px] flex-row mt-[2rem]  gap-x-[6rem] pl-[3rem]">
