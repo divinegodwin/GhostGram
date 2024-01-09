@@ -70,7 +70,7 @@ const CommentBody = ({ post }) => {
   return (
     <div>
       <div>{loadingComment && <Loader />}</div>
-      <div className="mt-14 flex flex-col gap-6 h-[200px] overflow-y-auto">
+      <div className="pt-[8rem] flex flex-col gap-6 h-[200px] overflow-y-auto">
         <div>
           {comments.map((comment) => (
             <div
