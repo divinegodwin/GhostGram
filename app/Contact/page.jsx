@@ -23,7 +23,7 @@ const Contact = () => {
     <>
       <Navbar />
 
-      <div className="w-[100%] p-4 flex justify-center shadow-lg">
+      <div className="w-[100%] pt-[5rem] py-3 flex justify-center shadow-lg">
         <h1 className="font-bold">Contact Me </h1>
       </div>
 

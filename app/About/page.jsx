@@ -7,7 +7,7 @@ const About = () =>{
         <div>
             <Navbar h1 ="About" />
 
-<div className="flex justify-center p-6 shadow-lg">
+<div className="about-heading flex justify-center pt-[5rem] py-4 shadow-lg">
             <h1 className="text-2xl justify-center">About</h1>
             
             </div>
