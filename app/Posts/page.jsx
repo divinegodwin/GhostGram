@@ -29,7 +29,7 @@ const Post = () => {
   useEffect(() => {
     let timeString = getTime();
     setTime(timeString);
-  },[]);
+  }, []);
 
   const [posts, setPosts] = useState([]);
   const [userInput, setUserInput] = useState("");
@@ -38,7 +38,6 @@ const Post = () => {
     setUserInput(event.target.value);
   };
   //when the button is clicked if stores the user input into an array of post
-
 
   const postButton = () => {
     if (userInput != "") {
@@ -80,7 +79,13 @@ const Post = () => {
         .select("id,post,time")
         .order("created_at", { ascending: false }); //fetching the data from new to old
       if (data) {
-        setPosts(data.map((entry) => ({  id: entry.id, post: entry.post, time: entry.time }))); // setting and fetching from the columns by mapping through and assignning each column to its value
+        setPosts(
+          data.map((entry) => ({
+            id: entry.id,
+            post: entry.post,
+            time: entry.time,
+          }))
+        ); // setting and fetching from the columns by mapping through and assignning each column to its value
       }
       if (error) {
         console.log("error fetching data", error);
@@ -91,23 +96,26 @@ const Post = () => {
   };
   fetchData(); // calling the fetch function
 
-//setting comment visibility state when the comment icon is clicked
+  //setting comment visibility state when the comment icon is clicked
   //state for each comment to be visible to a particular post
-  const [commentVisibility, setCommentVisiblity] = useState({})// takes an object to store the key for each post
+  const [commentVisibility, setCommentVisiblity] = useState({}); // takes an object to store the key for each post
 
   //togling visibility for each post comment
 
-function commentClicked (postId){// post id a key to check the current clicked icon
-    setCommentVisiblity((prevVisibility) =>({...prevVisibility, [postId]: !prevVisibility[postId],}))
-}
-
+  function commentClicked(postId) {
+    // post id a key to check the current clicked icon
+    setCommentVisiblity((prevVisibility) => ({
+      ...prevVisibility,
+      [postId]: !prevVisibility[postId],
+    }));
+  }
 
   return (
     <div>
       <div>
         <Navbar />
       </div>
-    
+
       <div className="pt-[4rem]">
         <div className=" mt-[2rem] ml-16">
           <textarea
@@ -185,7 +193,7 @@ function commentClicked (postId){// post id a key to check the current clicked i
 
             <div className="w-[25px]">
               <svg
-              onClick={()=>commentClicked(post.id)}
+                onClick={() => commentClicked(post.id)}
                 data-slot="icon"
                 fill="none"
                 stroke-width="1.5"
@@ -219,13 +227,9 @@ function commentClicked (postId){// post id a key to check the current clicked i
               </svg>
             </div>
           </div>
-            {/* comment call */}
+          {/* comment call */}
 
-            {commentVisibility[post.id] &&(
-                       <CommentBody post={post} />
-   
-            )}
-
+          {commentVisibility[post.id] && <CommentBody post={post} />}
         </div>
       ))}
 
@@ -262,16 +266,13 @@ function commentClicked (postId){// post id a key to check the current clicked i
             <strong>MORE FEATURES COMING SOON!</strong>
           </p>
         </div>
-      
-
       </div>
       <div className="bg-[#f8f9fa] fixed h-[80px] bottom-0">
-      <marquee className='marquee px-4 p-8 text-black text'>
-      Hello and welcome to GhostGram, users are set anonymously by the
-            system but can choose to be known.
-          
-            <strong>MORE FEATURES COMING SOON!</strong>
-      </marquee>
+        <marquee className="marquee px-4 p-8 text-black text">
+          Hello and welcome to GhostGram, users are set anonymously by the
+          system but can choose to be known.
+          <strong>MORE FEATURES COMING SOON!</strong>
+        </marquee>
       </div>
     </div>
   );
