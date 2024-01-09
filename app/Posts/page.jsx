@@ -137,7 +137,11 @@ function commentClicked (postId){// post id a key to check the current clicked i
             GH
           </div>
 
+
           <div className="menu-icon ml-[20rem] mt-[-2rem]">
+
+                 <div className="menu-icon ml-[20rem] mt-[-2rem]">
+
             <svg
               className="w-[28px] h-[28px]"
               data-slot="icon"
@@ -155,6 +159,7 @@ function commentClicked (postId){// post id a key to check the current clicked i
               ></path>
             </svg>
           </div>
+
 
           <div className="post-description ml-[4rem] mt-8">
             <p> {post.post}</p>
