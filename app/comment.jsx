@@ -13,7 +13,7 @@ const Comment = ({className, handleCommentChange, value, handleCommentButton}) =
         
         <button 
         onClick={handleCommentButton}
-        className='bg-[#3f37c9] w-[100px] h-[40px] text-[#ffff] rounded-lg'>send</button>
+        className='comment-btn bg-[#3f37c9] w-[100px] h-[40px] text-[#ffff] rounded-lg'>send</button>
     
     <div>
 

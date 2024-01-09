@@ -65,7 +65,7 @@ const CommentBody = ({post}) => {
 
       <div className=' grid justify-center '>
         <Comment
-          className="w-200px border-2 h-auto rounded-lg "
+          className="w-200px border-2 h-auto rounded-lg comment-box"
           handleCommentChange={(e) => setCommentInput(e.target.value)}
           value={commentInput}
           handleCommentButton={handleCommentButton}

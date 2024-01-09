@@ -108,18 +108,18 @@ function commentClicked (postId){// post id a key to check the current clicked i
         <Navbar />
       </div>
       <div>
-        <div className="mt-[2rem] ml-16">
+        <div className=" mt-[2rem] ml-16">
           <textarea
             onChange={handleChange}
             value={userInput}
-            className="border-2 w-[250px] h-[80px] text-area"
+            className="post-input border-2 w-[250px] h-[80px] text-area"
           ></textarea>
         </div>
 
         <div>
           <button
             onClick={postButton}
-            className="w-[90px] h-[40px] p-2 bg-[#adb5bd] ml-[14rem] rounded-2xl post-btn"
+            className="post-btn w-[90px] h-[40px] p-2 bg-[#adb5bd] ml-[14rem] rounded-2xl post-btn"
           >
             Post
           </button>

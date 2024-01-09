@@ -28,7 +28,7 @@ const Contact = () => {
       </div>
 
       <form className="contact-container grid place-items-center px-4  mt-10 shadow-lg max-w-[90%] h-[450px] ml-4 pl-8 ">
-        <div className="">
+       
           <div className="flex flex-col mb-6">
             <label for="name" className="pl-1">
               Name
@@ -73,7 +73,7 @@ const Contact = () => {
               Send
             </button>
           </div>
-        </div>
+        
       </form>
 <Footer />
     </>
