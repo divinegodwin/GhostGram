@@ -129,6 +129,7 @@
     .inputs-account-container {
         padding-left: 1.1rem;
     }
+    
 
 }
 
@@ -168,10 +169,10 @@
 }
 
 @media only screen and (min-width:1024px) {
-    .text-area {
+    .post-input {
         width: 45rem;
-        height: 120px;
-        margin-left: 12rem;
+        height: 140px;
+        margin-left: 22rem;
         border-radius: 10px;
         padding: 10px;
     }
@@ -179,7 +180,7 @@
     .post-btn {
         width: 200px;
         height: 80px;
-        margin-left: 49rem;
+        margin-left: 59rem;
     }
 
     .post-div {
@@ -268,7 +269,7 @@
     .explore-btn {
         width: 300px;
         height: 70px;
-        margin-left: 26rem;
+        margin-left: 24rem;
         margin-top: 4rem;
     }
 
@@ -276,8 +277,8 @@
         width: 400px;
     }
 
-    .delete-icon {
-        margin-left: rem;
+    .menu-icon {
+        float: right;
     }
 
     .auth-form {
@@ -326,8 +327,7 @@
     }
 
     .contact-container {
-        margin-left: 20rem;
-        justify-content: center;
+        margin-left: 24rem;
         height: 500px;
         width: 50%;
     }
@@ -336,14 +336,26 @@
         width: 400px;
     }
 
-    .send-btn {
+    .send-btn{
         width: 400px;
-        height: 55px;
     }
 
+   .comment-box{
+    width: 400px;
+    height: 60px;
+   }
+
+    .comment-btn{
+        height: 60px;
+    }
+
+
     .footer {
-        padding-left: 37rem;
-        height: 80px;
-        padding-top: 1.5rem;
+       justify-content: center;
+       position: fixed;
+       bottom: 0;
+       height: 60px;
+       padding-top: 20px;
+       
     }
 }

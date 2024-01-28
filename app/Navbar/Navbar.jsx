@@ -14,8 +14,8 @@ export const Navbar = () => {
 
   return (
 
-    <div>
-        <div className="p-5 shadow-xl text-white flex flex-row gap-40 bg-[#3f37c9] h-[4rem] w-[100%]">
+    <div className="fixed  w-full">
+        <div className=" p-5 shadow-xl text-white flex flex-row gap-40 bg-[#3f37c9] h-[4rem] w-[100%]">
       <div className="ml-2">
         <h1 className="header">GhostGram</h1>
       </div>
@@ -41,9 +41,9 @@ export const Navbar = () => {
     </div>
     
     {opened && (
-    <div className=" nav w-[100%] bg-[#3f37c9] mt-[-0.75rem] text-white pb-4">
+    <div className="  nav w-[100%] bg-[#3f37c9] mt-[-0.75rem] text-white pb-4">
      
-      <ul className=" nav-ul flex flex-col gap-4 mt-3 ml-[10rem]">
+      <ul className="  nav-ul flex flex-col gap-4 mt-3 ml-[10rem]">
         
         <Link href="/Posts">
         <li>Home</li>
