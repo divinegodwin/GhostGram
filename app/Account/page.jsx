@@ -66,6 +66,7 @@ const Account = () => {
   };
 
   return (
+    
     <div className= "grid place-items-center px-4 py-4 min-h-[100vh]">
       <form
         onSubmit={handleCreateAccount}
